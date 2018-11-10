@@ -1,0 +1,17 @@
+using System.Drawing;
+
+namespace Chess.Lib.Pieces
+{
+    public abstract class Piece
+    {
+        protected Piece(Color color)
+        {
+            Color = color;
+        }
+
+        public Color Color { get; }
+        
+        public override string ToString() => "Piece";
+
+    }
+}
