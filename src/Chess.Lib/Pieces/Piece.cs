@@ -10,5 +10,8 @@ namespace Chess.Lib.Pieces
         }
 
         public Color Color { get; }
+        
+        public override string ToString() => "Piece";
+
     }
 }

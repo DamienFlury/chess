@@ -7,5 +7,7 @@ namespace Chess.Lib.Pieces
         public Rook(Color color) : base(color)
         {
         }
+        
+        public override string ToString() => "Rook";
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using Chess.Lib;
+using Chess.Lib.Pieces;
 
 namespace Chess.App
 {
@@ -8,7 +9,8 @@ namespace Chess.App
     {
         private static void Main(string[] args)
         {
-            DrawBoardToConsole();
+            var game = new Game("Test", "Test2");
+            DrawBoardToConsoleSimplified(game);
         }
 
         private static void DrawBoardToConsole()
@@ -19,7 +21,7 @@ namespace Chess.App
             for (var y = 0; y <= height; y++)
             {
                 for (var x = 0; x <= width; x++)
-                {   
+                {
                     Console.Write((x == 0 || x == width) && (y - 8) % 5 == 0
                         ? (char) (49 + y / 5)
                         : (y == 0 || y == height) && (x - 8) % 15 == 0
@@ -29,6 +31,28 @@ namespace Chess.App
                                 : (y - 1) % (height / 8) == 0
                                     ? '–'
                                     : ' ');
+                }
+
+                Console.WriteLine();
+            }
+        }
+
+        private static void DrawBoardToConsoleSimplified(Game game)
+        {
+            for (var y = 0; y < 8; y++)
+            {
+                for (var x = 0; x < 8; x++)
+                {
+                    if (game.Board[x, y] is OccupiedTile occupiedTile)
+                    {
+                        Console.Write(occupiedTile.Piece.ToString().ToUpperInvariant()[0]);
+                    }
+                    else
+                    {
+                        Console.Write(' ');
+                    }
+
+                    Console.Write(' ');
                 }
 
                 Console.WriteLine();

@@ -7,5 +7,8 @@ namespace Chess.Lib.Pieces
         public Pawn(Color color) : base(color)
         {
         }
+        
+        public override string ToString() => "Pawn";
+
     }
 }
