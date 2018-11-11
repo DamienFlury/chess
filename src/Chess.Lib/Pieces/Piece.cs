@@ -1,3 +1,4 @@
+using System;
 using System.Drawing;
 
 namespace Chess.Lib.Pieces
@@ -7,12 +8,12 @@ namespace Chess.Lib.Pieces
     /// </summary>
     public abstract class Piece
     {
-        protected Piece(Color color)
+        protected Piece(ConsoleColor color)
         {
             Color = color;
         }
 
-        public Color Color { get; }
+        public ConsoleColor Color { get; }
         
         public override string ToString() => "Piece";
 

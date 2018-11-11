@@ -13,7 +13,7 @@ namespace Chess.Lib
         /// </summary>
         /// <param name="name">No null allowed</param>
         /// <param name="color"></param>
-        public Player(string name, Color color)
+        public Player(string name, ConsoleColor color)
         {
             Name = name ?? throw new ArgumentNullException(nameof(name));
             Color = color;
@@ -27,6 +27,6 @@ namespace Chess.Lib
         /// <summary>
         /// The color/team of the player.
         /// </summary>
-        internal Color Color { get; }
+        internal ConsoleColor Color { get; }
     }
 }

@@ -45,7 +45,9 @@ namespace Chess.App
                 {
                     if (game.Board[x, y] is OccupiedTile occupiedTile)
                     {
+                        Console.ForegroundColor = occupiedTile.Piece.Color;
                         Console.Write(occupiedTile.Piece.ToString().ToUpperInvariant()[0]);
+                        Console.ResetColor();
                     }
                     else
                     {

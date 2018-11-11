@@ -1,10 +1,11 @@
+using System;
 using System.Drawing;
 
 namespace Chess.Lib.Pieces
 {
     public sealed class King : Piece
     {
-        public King(Color color) : base(color)
+        public King(ConsoleColor color) : base(color)
         {
         }
         
