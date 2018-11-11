@@ -14,4 +14,6 @@ steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
 - script: dotnet test $(testsPath)
-  displayName: 'dotnet test'
+  displayName: 'Unit tests'
+- script: docfx docfx.json --build
+  displayName: 'Build DocFX'

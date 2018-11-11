@@ -21,10 +21,10 @@
       "output": {
         ".html": {
           "relative_path": "api/Chess.Lib.EmptyTile.html",
-          "hash": "B8PVGEFYWmFnlCbU9feNCQ=="
+          "hash": "uUvFr82ECaVJMt/w/wPZpw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -33,10 +33,10 @@
       "output": {
         ".html": {
           "relative_path": "api/Chess.Lib.Game.html",
-          "hash": "sTD0LShtF6LAStZsh9HvQw=="
+          "hash": "pASF5lVzjIdustr55u+FDQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -45,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Chess.Lib.ITile.html",
-          "hash": "nqM5pGlWHovNgDuvFOgHPQ=="
+          "hash": "KFKbHjUBJkPOw84ijHS6hQ=="
         }
       },
       "is_incremental": true,
@@ -57,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Chess.Lib.OccupiedTile.html",
-          "hash": "QK/9BGTN3koqQyRxQsuwVw=="
+          "hash": "nUU4MMYI5UDJLqxDezTeCw=="
         }
       },
       "is_incremental": false,
@@ -117,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Chess.Lib.Pieces.Piece.html",
-          "hash": "uVSwU0hFUKv+xKJFfLl+6g=="
+          "hash": "Ina5j8ofxt8jnG4KvUcrbg=="
         }
       },
       "is_incremental": false,
@@ -153,7 +153,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Chess.Lib.Pieces.html",
-          "hash": "YZvJRc8eZ6Um0o80xGueww=="
+          "hash": "7RPP15jSL4NWTF+mJ4yFbA=="
         }
       },
       "is_incremental": false,
@@ -165,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Chess.Lib.html",
-          "hash": "6CeCn5fQIp3wIpRCfCfRgQ=="
+          "hash": "WzyAqmcvkDvH9Z4kakVkCg=="
         }
       },
       "is_incremental": false,
@@ -256,11 +256,11 @@
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "ManagedReferenceDocumentProcessor": {
+        "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build"
         },
-        "ConceptualDocumentProcessor": {
+        "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build"
         }

@@ -5,8 +5,18 @@ using Chess.Lib.Pieces;
 
 namespace Chess.Lib
 {
+    /// <summary>
+    /// Has the board as two-dimensional array of tiles. Also know both players.
+    /// Shallow immutable (planning on making the array an immutable collection to provide full immutability).
+    /// </summary>
     public sealed class Game
     {
+        /// <summary>
+        /// Creates a new game instance. Both player names can't be null.
+        /// Creates the board array of tiles as a starting game.
+        /// </summary>
+        /// <param name="whitePlayerName">No null allowed</param>
+        /// <param name="blackPlayerName">No null allowed</param>
         public Game(string whitePlayerName, string blackPlayerName)
         {
             whitePlayerName = whitePlayerName ?? throw new ArgumentNullException(nameof(whitePlayerName));
@@ -44,6 +54,9 @@ namespace Chess.Lib
         private Player WhitePlayer { get; }
         private Player BlackPlayer { get; }
         
+        /// <summary>
+        /// The board. Contains either occupied tiles or Empty tiles. Null should never be used.
+        /// </summary>
         public ITile[,] Board { get; }
     }
 }
