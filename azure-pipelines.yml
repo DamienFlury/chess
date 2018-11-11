@@ -8,7 +8,7 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
-  testsPath: 'tests\Chess.Lib.Tests\'
+  testsPath: 'tests/Chess.Lib.Tests/'
 
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
