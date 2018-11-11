@@ -15,5 +15,3 @@ steps:
   displayName: 'dotnet build $(buildConfiguration)'
 - script: dotnet test $(testsPath)
   displayName: 'Unit tests'
-- script: docfx docfx.json --build
-  displayName: 'Build DocFX'
