@@ -1,0 +1,284 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/Users/damie/source/repos/chess",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "README.md",
+      "output": {
+        ".html": {
+          "relative_path": "README.html",
+          "hash": "wDBWtwQC9CtS4FvM9SHbMg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chess.Lib.EmptyTile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chess.Lib.EmptyTile.html",
+          "hash": "B8PVGEFYWmFnlCbU9feNCQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chess.Lib.Game.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chess.Lib.Game.html",
+          "hash": "sTD0LShtF6LAStZsh9HvQw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chess.Lib.ITile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chess.Lib.ITile.html",
+          "hash": "nqM5pGlWHovNgDuvFOgHPQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chess.Lib.OccupiedTile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chess.Lib.OccupiedTile.html",
+          "hash": "QK/9BGTN3koqQyRxQsuwVw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chess.Lib.Pieces.Bishop.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chess.Lib.Pieces.Bishop.html",
+          "hash": "btErrEaqOFYJilab8mO62A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chess.Lib.Pieces.King.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chess.Lib.Pieces.King.html",
+          "hash": "K01NL/JN3teo6bk1QcPEVQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chess.Lib.Pieces.Knight.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chess.Lib.Pieces.Knight.html",
+          "hash": "N8iuCJoIR7OIdIpPXi1BuA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chess.Lib.Pieces.Pawn.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chess.Lib.Pieces.Pawn.html",
+          "hash": "jpZ4SO7vf9XfgGH3M1UicA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chess.Lib.Pieces.Piece.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chess.Lib.Pieces.Piece.html",
+          "hash": "uVSwU0hFUKv+xKJFfLl+6g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chess.Lib.Pieces.Queen.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chess.Lib.Pieces.Queen.html",
+          "hash": "I/s2vo12/vRVWQFKZ6fsUg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chess.Lib.Pieces.Rook.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chess.Lib.Pieces.Rook.html",
+          "hash": "B1dSDnvWrFwv9gE7It5MJQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chess.Lib.Pieces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chess.Lib.Pieces.html",
+          "hash": "YZvJRc8eZ6Um0o80xGueww=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chess.Lib.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chess.Lib.html",
+          "hash": "6CeCn5fQIp3wIpRCfCfRgQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "yK7Sn7+pvoBOq9bSlcsKBA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "tB0Pq6bfU84d55tXk8dWYw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "wtNOEElDvSnopLvzqCZrUQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "t7iiFrmuYmrKWisdq+lN6Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "vvRkMH/0b3F/4lUwxEsObg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "k+/dkjFuwAVS32HduMpmBw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build"
+      },
+      "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build"
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build"
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing"
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
