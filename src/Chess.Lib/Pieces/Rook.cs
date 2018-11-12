@@ -18,13 +18,12 @@ namespace Chess.Lib.Pieces
         {
             get
             {
-                for (var y = -7; y <= 7; y++)
+                for (var i = 1; i < 8; i++)
                 {
-                    for (var x = -7; x <= 7; x++)
-                    {
-                        if (x == 0 && y == 0) continue;
-                        if(x == 0 || y == 0) yield return new Move(x, y);
-                    }
+                    yield return new Move(i, 0);
+                    yield return new Move(-i, 0);
+                    yield return new Move(0, i);
+                    yield return new Move(0, -i);
                 }
             }
         }

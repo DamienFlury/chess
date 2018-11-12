@@ -20,13 +20,14 @@ namespace Chess.Lib.Pieces
         {
             get
             {
-                for (var y = -1; y <= 1; y++)
-                {
-                    for (var x = -1; x <= 1; x++)
-                    {
-                        if (!(x == 0 && y == 0)) yield return new Move(x, y);
-                    }
-                }
+                yield return new Move(0, -1);
+                yield return new Move(1, -1);
+                yield return new Move(1, 0);
+                yield return new Move(1, 1);
+                yield return new Move(0, 1);
+                yield return new Move(-1, 1);
+                yield return new Move(-1, 0);
+                yield return new Move(-1, -1);
             }
         }
     }
