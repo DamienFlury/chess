@@ -1,5 +1,4 @@
 using System;
-using System.Drawing;
 
 namespace Chess.Lib
 {
@@ -13,10 +12,10 @@ namespace Chess.Lib
         /// </summary>
         /// <param name="name">No null allowed</param>
         /// <param name="color"></param>
-        public Player(string name, ConsoleColor color)
+        public Player(string name, Team team)
         {
             Name = name ?? throw new ArgumentNullException(nameof(name));
-            Color = color;
+            Team = team;
         }
 
         /// <summary>
@@ -27,6 +26,6 @@ namespace Chess.Lib
         /// <summary>
         /// The color/team of the player.
         /// </summary>
-        internal ConsoleColor Color { get; }
+        internal Team Team { get; }
     }
 }

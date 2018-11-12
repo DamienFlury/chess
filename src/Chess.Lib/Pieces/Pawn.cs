@@ -5,7 +5,7 @@ namespace Chess.Lib.Pieces
 {
     public sealed class Pawn : Piece
     {
-        public Pawn(ConsoleColor color) : base(color)
+        public Pawn(Team team) : base(team)
         {
         }
         

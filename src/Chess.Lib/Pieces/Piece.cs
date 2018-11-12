@@ -8,12 +8,12 @@ namespace Chess.Lib.Pieces
     /// </summary>
     public abstract class Piece
     {
-        protected Piece(ConsoleColor color)
+        protected Piece(Team team)
         {
-            Color = color;
+            Team = team;
         }
 
-        public ConsoleColor Color { get; }
+        public Team Team { get; }
         
         public override string ToString() => "Piece";
 

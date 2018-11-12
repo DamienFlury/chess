@@ -46,7 +46,7 @@ namespace Chess.App
                 {
                     if (game.Board[x, y] is OccupiedTile occupiedTile)
                     {
-                        Console.ForegroundColor = occupiedTile.Piece.Color;
+                        Console.ForegroundColor = occupiedTile.Piece.Team == Team.Black ? ConsoleColor.Cyan : ConsoleColor.Yellow;
                         Console.Write(occupiedTile.Piece.ToString().ToUpperInvariant()[0]);
                         Console.ResetColor();
                     }

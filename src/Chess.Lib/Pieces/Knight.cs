@@ -5,7 +5,7 @@ namespace Chess.Lib.Pieces
 {
     public class Knight : Piece
     {
-        public Knight(ConsoleColor color): base(color)
+        public Knight(Team team): base(team)
         {
         }
         
