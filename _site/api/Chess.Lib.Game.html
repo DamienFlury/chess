@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Game
    ">
-    <meta name="generator" content="docfx 2.40.1.0">
+    <meta name="generator" content="docfx 2.40.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -119,7 +119,7 @@ Shallow immutable (planning on making the array an immutable collection to provi
     <a href="https://github.com/DamienFlury/chess/new/develop/apiSpec/new?filename=Chess_Lib_Game__ctor_System_String_System_String_.md&amp;value=---%0Auid%3A%20Chess.Lib.Game.%23ctor(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/DamienFlury/chess/blob/develop/src/Chess.Lib/Game.cs/#L20">View Source</a>
+    <a href="https://github.com/DamienFlury/chess/blob/develop/src/Chess.Lib/Game.cs/#L30">View Source</a>
   </span>
   <a id="Chess_Lib_Game__ctor_" data-uid="Chess.Lib.Game.#ctor*"></a>
   <h4 id="Chess_Lib_Game__ctor_System_String_System_String_" data-uid="Chess.Lib.Game.#ctor(System.String,System.String)">Game(String, String)</h4>
@@ -162,7 +162,7 @@ Creates the board array of tiles as a starting game.</p>
     <a href="https://github.com/DamienFlury/chess/new/develop/apiSpec/new?filename=Chess_Lib_Game_Board.md&amp;value=---%0Auid%3A%20Chess.Lib.Game.Board%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/DamienFlury/chess/blob/develop/src/Chess.Lib/Game.cs/#L60">View Source</a>
+    <a href="https://github.com/DamienFlury/chess/blob/develop/src/Chess.Lib/Game.cs/#L94">View Source</a>
   </span>
   <a id="Chess_Lib_Game_Board_" data-uid="Chess.Lib.Game.Board*"></a>
   <h4 id="Chess_Lib_Game_Board" data-uid="Chess.Lib.Game.Board">Board</h4>
@@ -183,7 +183,87 @@ Creates the board array of tiles as a starting game.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Chess.Lib.ITile.html">ITile</a>[,]</td>
+        <td><a class="xref" href="Chess.Lib.Tiles.ITile.html">ITile</a>[,]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/DamienFlury/chess/new/develop/apiSpec/new?filename=Chess_Lib_Game_Move_System_Int32_System_Int32_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20Chess.Lib.Game.Move(System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/DamienFlury/chess/blob/develop/src/Chess.Lib/Game.cs/#L105">View Source</a>
+  </span>
+  <a id="Chess_Lib_Game_Move_" data-uid="Chess.Lib.Game.Move*"></a>
+  <h4 id="Chess_Lib_Game_Move_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="Chess.Lib.Game.Move(System.Int32,System.Int32,System.Int32,System.Int32)">Move(Int32, Int32, Int32, Int32)</h4>
+  <div class="markdown level1 summary"><p>Moves a piece.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Game Move(int xCurrent, int yCurrent, int xDestination, int yDestination)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">xCurrent</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">yCurrent</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">xDestination</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">yDestination</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Chess.Lib.Game.html">Game</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -199,7 +279,7 @@ Creates the board array of tiles as a starting game.</p>
                     <a href="https://github.com/DamienFlury/chess/new/develop/apiSpec/new?filename=Chess_Lib_Game.md&amp;value=---%0Auid%3A%20Chess.Lib.Game%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/DamienFlury/chess/blob/develop/src/Chess.Lib/Game.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/DamienFlury/chess/blob/develop/src/Chess.Lib/Game.cs/#L11" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

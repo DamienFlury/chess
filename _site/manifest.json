@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "C:/Users/damie/source/repos/chess",
+  "source_base_path": "C:/Users/fluryd/source/git/private/chess",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -9,22 +9,10 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "wDBWtwQC9CtS4FvM9SHbMg=="
+          "hash": "Yi53v9pjSdiHS8nglSxZvA=="
         }
       },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Chess.Lib.EmptyTile.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Chess.Lib.EmptyTile.html",
-          "hash": "uUvFr82ECaVJMt/w/wPZpw=="
-        }
-      },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -33,31 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Chess.Lib.Game.html",
-          "hash": "pASF5lVzjIdustr55u+FDQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Chess.Lib.ITile.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Chess.Lib.ITile.html",
-          "hash": "KFKbHjUBJkPOw84ijHS6hQ=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Chess.Lib.OccupiedTile.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Chess.Lib.OccupiedTile.html",
-          "hash": "nUU4MMYI5UDJLqxDezTeCw=="
+          "hash": "Tad+C5xTo826HSmejyqcTQ=="
         }
       },
       "is_incremental": false,
@@ -69,7 +33,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Chess.Lib.Pieces.Bishop.html",
-          "hash": "btErrEaqOFYJilab8mO62A=="
+          "hash": "vqEJwpuGZiw5XgYJwJKgsg=="
         }
       },
       "is_incremental": false,
@@ -81,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Chess.Lib.Pieces.King.html",
-          "hash": "K01NL/JN3teo6bk1QcPEVQ=="
+          "hash": "NUbaEPYwyTzkF6si1cpPvQ=="
         }
       },
       "is_incremental": false,
@@ -93,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Chess.Lib.Pieces.Knight.html",
-          "hash": "N8iuCJoIR7OIdIpPXi1BuA=="
+          "hash": "QvRfoAUMXcEL73Sl5VyI0Q=="
         }
       },
       "is_incremental": false,
@@ -105,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Chess.Lib.Pieces.Pawn.html",
-          "hash": "jpZ4SO7vf9XfgGH3M1UicA=="
+          "hash": "gJp2upKQ8dipe/TovLpZog=="
         }
       },
       "is_incremental": false,
@@ -117,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Chess.Lib.Pieces.Piece.html",
-          "hash": "Ina5j8ofxt8jnG4KvUcrbg=="
+          "hash": "OOJMsE4O00v4fm2gbvYFJQ=="
         }
       },
       "is_incremental": false,
@@ -129,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Chess.Lib.Pieces.Queen.html",
-          "hash": "I/s2vo12/vRVWQFKZ6fsUg=="
+          "hash": "Pa1++fZBNqiie94cifhURw=="
         }
       },
       "is_incremental": false,
@@ -141,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Chess.Lib.Pieces.Rook.html",
-          "hash": "B1dSDnvWrFwv9gE7It5MJQ=="
+          "hash": "ZRYRLPYFxFfpq+0znEiLbw=="
         }
       },
       "is_incremental": false,
@@ -153,7 +117,67 @@
       "output": {
         ".html": {
           "relative_path": "api/Chess.Lib.Pieces.html",
-          "hash": "7RPP15jSL4NWTF+mJ4yFbA=="
+          "hash": "P/8bu9sOU/3TyYylJZpzSA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chess.Lib.Team.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chess.Lib.Team.html",
+          "hash": "gxFl8y2z4Yxdw2JRsZG4Yw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chess.Lib.Tiles.EmptyTile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chess.Lib.Tiles.EmptyTile.html",
+          "hash": "bltfb72/+I0AmYH+eBxNtg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chess.Lib.Tiles.ITile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chess.Lib.Tiles.ITile.html",
+          "hash": "Uf1AOmjGycz3/jN9Ra4qkQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chess.Lib.Tiles.OccupiedTile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chess.Lib.Tiles.OccupiedTile.html",
+          "hash": "Ix2f0QmYsUIaUrvGhQvtCA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chess.Lib.Tiles.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chess.Lib.Tiles.html",
+          "hash": "jAnSMq3MxHGu6e0P0wfXww=="
         }
       },
       "is_incremental": false,
@@ -165,7 +189,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Chess.Lib.html",
-          "hash": "WzyAqmcvkDvH9Z4kakVkCg=="
+          "hash": "Q7S2Bz7yoA+ou9gP2hf8VQ=="
         }
       },
       "is_incremental": false,
@@ -177,10 +201,10 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "yK7Sn7+pvoBOq9bSlcsKBA=="
+          "hash": "2g8jTae/E1XmNc2vXJ5OXQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -189,7 +213,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "tB0Pq6bfU84d55tXk8dWYw=="
+          "hash": "v5Dia4HTpUeb9bnhq6Vdgg=="
         }
       },
       "is_incremental": false,
@@ -201,10 +225,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/intro.html",
-          "hash": "wtNOEElDvSnopLvzqCZrUQ=="
+          "hash": "opTd4e7rvpu/ki5g7ojc+Q=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -225,10 +249,10 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "vvRkMH/0b3F/4lUwxEsObg=="
+          "hash": "lM/T5+pB1D0O2nBW0qYlfg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -247,29 +271,30 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": true,
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
         "incrementalPhase": "build"
       },
       "processors": {
-        "TocDocumentProcessor": {
+        "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {
-          "can_incremental": true,
+          "can_incremental": false,
           "incrementalPhase": "build"
         },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }
     },
     {
       "status": {
-        "can_incremental": true,
-        "details": "Can support incremental post processing.",
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
         "incrementalPhase": "postProcessing"
       },
       "processors": {}

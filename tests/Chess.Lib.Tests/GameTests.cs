@@ -41,5 +41,19 @@ namespace Chess.Lib.Tests
                 }
             }
         }
+
+        [Fact]
+        public void Move_Test()
+        {
+            var game = new Game("First", "Second");
+
+            var gameAfterMove = game.Move(0, 0, 0, 3);
+            
+            Assert.True(game.Board[0, 0] is OccupiedTile occupiedTile && occupiedTile.Piece is Rook);
+            Assert.True(game.Board[0, 3] is EmptyTile);
+            
+            Assert.True(gameAfterMove.Board[0, 0] is EmptyTile);
+            Assert.True(gameAfterMove.Board[0, 3] is OccupiedTile occupiedTileAfterMove && occupiedTileAfterMove.Piece is Rook);
+        }
     }
 }

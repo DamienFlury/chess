@@ -7,12 +7,6 @@ references:
   commentId: N:Chess.Lib
   fullName: Chess.Lib
   nameWithType: Chess.Lib
-- uid: Chess.Lib.EmptyTile
-  name: EmptyTile
-  href: api/Chess.Lib.EmptyTile.html
-  commentId: T:Chess.Lib.EmptyTile
-  fullName: Chess.Lib.EmptyTile
-  nameWithType: EmptyTile
 - uid: Chess.Lib.Game
   name: Game
   href: api/Chess.Lib.Game.html
@@ -45,44 +39,19 @@ references:
   isSpec: "True"
   fullName: Chess.Lib.Game.Board
   nameWithType: Game.Board
-- uid: Chess.Lib.ITile
-  name: ITile
-  href: api/Chess.Lib.ITile.html
-  commentId: T:Chess.Lib.ITile
-  fullName: Chess.Lib.ITile
-  nameWithType: ITile
-- uid: Chess.Lib.OccupiedTile
-  name: OccupiedTile
-  href: api/Chess.Lib.OccupiedTile.html
-  commentId: T:Chess.Lib.OccupiedTile
-  fullName: Chess.Lib.OccupiedTile
-  nameWithType: OccupiedTile
-- uid: Chess.Lib.OccupiedTile.#ctor(Chess.Lib.Pieces.Piece)
-  name: OccupiedTile(Piece)
-  href: api/Chess.Lib.OccupiedTile.html#Chess_Lib_OccupiedTile__ctor_Chess_Lib_Pieces_Piece_
-  commentId: M:Chess.Lib.OccupiedTile.#ctor(Chess.Lib.Pieces.Piece)
-  fullName: Chess.Lib.OccupiedTile.OccupiedTile(Chess.Lib.Pieces.Piece)
-  nameWithType: OccupiedTile.OccupiedTile(Piece)
-- uid: Chess.Lib.OccupiedTile.#ctor*
-  name: OccupiedTile
-  href: api/Chess.Lib.OccupiedTile.html#Chess_Lib_OccupiedTile__ctor_
-  commentId: Overload:Chess.Lib.OccupiedTile.#ctor
+- uid: Chess.Lib.Game.Move(System.Int32,System.Int32,System.Int32,System.Int32)
+  name: Move(Int32, Int32, Int32, Int32)
+  href: api/Chess.Lib.Game.html#Chess_Lib_Game_Move_System_Int32_System_Int32_System_Int32_System_Int32_
+  commentId: M:Chess.Lib.Game.Move(System.Int32,System.Int32,System.Int32,System.Int32)
+  fullName: Chess.Lib.Game.Move(System.Int32, System.Int32, System.Int32, System.Int32)
+  nameWithType: Game.Move(Int32, Int32, Int32, Int32)
+- uid: Chess.Lib.Game.Move*
+  name: Move
+  href: api/Chess.Lib.Game.html#Chess_Lib_Game_Move_
+  commentId: Overload:Chess.Lib.Game.Move
   isSpec: "True"
-  fullName: Chess.Lib.OccupiedTile.OccupiedTile
-  nameWithType: OccupiedTile.OccupiedTile
-- uid: Chess.Lib.OccupiedTile.Piece
-  name: Piece
-  href: api/Chess.Lib.OccupiedTile.html#Chess_Lib_OccupiedTile_Piece
-  commentId: P:Chess.Lib.OccupiedTile.Piece
-  fullName: Chess.Lib.OccupiedTile.Piece
-  nameWithType: OccupiedTile.Piece
-- uid: Chess.Lib.OccupiedTile.Piece*
-  name: Piece
-  href: api/Chess.Lib.OccupiedTile.html#Chess_Lib_OccupiedTile_Piece_
-  commentId: Overload:Chess.Lib.OccupiedTile.Piece
-  isSpec: "True"
-  fullName: Chess.Lib.OccupiedTile.Piece
-  nameWithType: OccupiedTile.Piece
+  fullName: Chess.Lib.Game.Move
+  nameWithType: Game.Move
 - uid: Chess.Lib.Pieces
   name: Chess.Lib.Pieces
   href: api/Chess.Lib.Pieces.html
@@ -95,12 +64,12 @@ references:
   commentId: T:Chess.Lib.Pieces.Bishop
   fullName: Chess.Lib.Pieces.Bishop
   nameWithType: Bishop
-- uid: Chess.Lib.Pieces.Bishop.#ctor(System.Drawing.Color)
-  name: Bishop(Color)
-  href: api/Chess.Lib.Pieces.Bishop.html#Chess_Lib_Pieces_Bishop__ctor_System_Drawing_Color_
-  commentId: M:Chess.Lib.Pieces.Bishop.#ctor(System.Drawing.Color)
-  fullName: Chess.Lib.Pieces.Bishop.Bishop(System.Drawing.Color)
-  nameWithType: Bishop.Bishop(Color)
+- uid: Chess.Lib.Pieces.Bishop.#ctor(Chess.Lib.Team)
+  name: Bishop(Team)
+  href: api/Chess.Lib.Pieces.Bishop.html#Chess_Lib_Pieces_Bishop__ctor_Chess_Lib_Team_
+  commentId: M:Chess.Lib.Pieces.Bishop.#ctor(Chess.Lib.Team)
+  fullName: Chess.Lib.Pieces.Bishop.Bishop(Chess.Lib.Team)
+  nameWithType: Bishop.Bishop(Team)
 - uid: Chess.Lib.Pieces.Bishop.#ctor*
   name: Bishop
   href: api/Chess.Lib.Pieces.Bishop.html#Chess_Lib_Pieces_Bishop__ctor_
@@ -127,12 +96,12 @@ references:
   commentId: T:Chess.Lib.Pieces.King
   fullName: Chess.Lib.Pieces.King
   nameWithType: King
-- uid: Chess.Lib.Pieces.King.#ctor(System.Drawing.Color)
-  name: King(Color)
-  href: api/Chess.Lib.Pieces.King.html#Chess_Lib_Pieces_King__ctor_System_Drawing_Color_
-  commentId: M:Chess.Lib.Pieces.King.#ctor(System.Drawing.Color)
-  fullName: Chess.Lib.Pieces.King.King(System.Drawing.Color)
-  nameWithType: King.King(Color)
+- uid: Chess.Lib.Pieces.King.#ctor(Chess.Lib.Team)
+  name: King(Team)
+  href: api/Chess.Lib.Pieces.King.html#Chess_Lib_Pieces_King__ctor_Chess_Lib_Team_
+  commentId: M:Chess.Lib.Pieces.King.#ctor(Chess.Lib.Team)
+  fullName: Chess.Lib.Pieces.King.King(Chess.Lib.Team)
+  nameWithType: King.King(Team)
 - uid: Chess.Lib.Pieces.King.#ctor*
   name: King
   href: api/Chess.Lib.Pieces.King.html#Chess_Lib_Pieces_King__ctor_
@@ -159,12 +128,12 @@ references:
   commentId: T:Chess.Lib.Pieces.Knight
   fullName: Chess.Lib.Pieces.Knight
   nameWithType: Knight
-- uid: Chess.Lib.Pieces.Knight.#ctor(System.Drawing.Color)
-  name: Knight(Color)
-  href: api/Chess.Lib.Pieces.Knight.html#Chess_Lib_Pieces_Knight__ctor_System_Drawing_Color_
-  commentId: M:Chess.Lib.Pieces.Knight.#ctor(System.Drawing.Color)
-  fullName: Chess.Lib.Pieces.Knight.Knight(System.Drawing.Color)
-  nameWithType: Knight.Knight(Color)
+- uid: Chess.Lib.Pieces.Knight.#ctor(Chess.Lib.Team)
+  name: Knight(Team)
+  href: api/Chess.Lib.Pieces.Knight.html#Chess_Lib_Pieces_Knight__ctor_Chess_Lib_Team_
+  commentId: M:Chess.Lib.Pieces.Knight.#ctor(Chess.Lib.Team)
+  fullName: Chess.Lib.Pieces.Knight.Knight(Chess.Lib.Team)
+  nameWithType: Knight.Knight(Team)
 - uid: Chess.Lib.Pieces.Knight.#ctor*
   name: Knight
   href: api/Chess.Lib.Pieces.Knight.html#Chess_Lib_Pieces_Knight__ctor_
@@ -191,12 +160,12 @@ references:
   commentId: T:Chess.Lib.Pieces.Pawn
   fullName: Chess.Lib.Pieces.Pawn
   nameWithType: Pawn
-- uid: Chess.Lib.Pieces.Pawn.#ctor(System.Drawing.Color)
-  name: Pawn(Color)
-  href: api/Chess.Lib.Pieces.Pawn.html#Chess_Lib_Pieces_Pawn__ctor_System_Drawing_Color_
-  commentId: M:Chess.Lib.Pieces.Pawn.#ctor(System.Drawing.Color)
-  fullName: Chess.Lib.Pieces.Pawn.Pawn(System.Drawing.Color)
-  nameWithType: Pawn.Pawn(Color)
+- uid: Chess.Lib.Pieces.Pawn.#ctor(Chess.Lib.Team)
+  name: Pawn(Team)
+  href: api/Chess.Lib.Pieces.Pawn.html#Chess_Lib_Pieces_Pawn__ctor_Chess_Lib_Team_
+  commentId: M:Chess.Lib.Pieces.Pawn.#ctor(Chess.Lib.Team)
+  fullName: Chess.Lib.Pieces.Pawn.Pawn(Chess.Lib.Team)
+  nameWithType: Pawn.Pawn(Team)
 - uid: Chess.Lib.Pieces.Pawn.#ctor*
   name: Pawn
   href: api/Chess.Lib.Pieces.Pawn.html#Chess_Lib_Pieces_Pawn__ctor_
@@ -223,12 +192,12 @@ references:
   commentId: T:Chess.Lib.Pieces.Piece
   fullName: Chess.Lib.Pieces.Piece
   nameWithType: Piece
-- uid: Chess.Lib.Pieces.Piece.#ctor(System.Drawing.Color)
-  name: Piece(Color)
-  href: api/Chess.Lib.Pieces.Piece.html#Chess_Lib_Pieces_Piece__ctor_System_Drawing_Color_
-  commentId: M:Chess.Lib.Pieces.Piece.#ctor(System.Drawing.Color)
-  fullName: Chess.Lib.Pieces.Piece.Piece(System.Drawing.Color)
-  nameWithType: Piece.Piece(Color)
+- uid: Chess.Lib.Pieces.Piece.#ctor(Chess.Lib.Team)
+  name: Piece(Team)
+  href: api/Chess.Lib.Pieces.Piece.html#Chess_Lib_Pieces_Piece__ctor_Chess_Lib_Team_
+  commentId: M:Chess.Lib.Pieces.Piece.#ctor(Chess.Lib.Team)
+  fullName: Chess.Lib.Pieces.Piece.Piece(Chess.Lib.Team)
+  nameWithType: Piece.Piece(Team)
 - uid: Chess.Lib.Pieces.Piece.#ctor*
   name: Piece
   href: api/Chess.Lib.Pieces.Piece.html#Chess_Lib_Pieces_Piece__ctor_
@@ -236,19 +205,19 @@ references:
   isSpec: "True"
   fullName: Chess.Lib.Pieces.Piece.Piece
   nameWithType: Piece.Piece
-- uid: Chess.Lib.Pieces.Piece.Color
-  name: Color
-  href: api/Chess.Lib.Pieces.Piece.html#Chess_Lib_Pieces_Piece_Color
-  commentId: P:Chess.Lib.Pieces.Piece.Color
-  fullName: Chess.Lib.Pieces.Piece.Color
-  nameWithType: Piece.Color
-- uid: Chess.Lib.Pieces.Piece.Color*
-  name: Color
-  href: api/Chess.Lib.Pieces.Piece.html#Chess_Lib_Pieces_Piece_Color_
-  commentId: Overload:Chess.Lib.Pieces.Piece.Color
+- uid: Chess.Lib.Pieces.Piece.Team
+  name: Team
+  href: api/Chess.Lib.Pieces.Piece.html#Chess_Lib_Pieces_Piece_Team
+  commentId: P:Chess.Lib.Pieces.Piece.Team
+  fullName: Chess.Lib.Pieces.Piece.Team
+  nameWithType: Piece.Team
+- uid: Chess.Lib.Pieces.Piece.Team*
+  name: Team
+  href: api/Chess.Lib.Pieces.Piece.html#Chess_Lib_Pieces_Piece_Team_
+  commentId: Overload:Chess.Lib.Pieces.Piece.Team
   isSpec: "True"
-  fullName: Chess.Lib.Pieces.Piece.Color
-  nameWithType: Piece.Color
+  fullName: Chess.Lib.Pieces.Piece.Team
+  nameWithType: Piece.Team
 - uid: Chess.Lib.Pieces.Piece.ToString
   name: ToString()
   href: api/Chess.Lib.Pieces.Piece.html#Chess_Lib_Pieces_Piece_ToString
@@ -268,12 +237,12 @@ references:
   commentId: T:Chess.Lib.Pieces.Queen
   fullName: Chess.Lib.Pieces.Queen
   nameWithType: Queen
-- uid: Chess.Lib.Pieces.Queen.#ctor(System.Drawing.Color)
-  name: Queen(Color)
-  href: api/Chess.Lib.Pieces.Queen.html#Chess_Lib_Pieces_Queen__ctor_System_Drawing_Color_
-  commentId: M:Chess.Lib.Pieces.Queen.#ctor(System.Drawing.Color)
-  fullName: Chess.Lib.Pieces.Queen.Queen(System.Drawing.Color)
-  nameWithType: Queen.Queen(Color)
+- uid: Chess.Lib.Pieces.Queen.#ctor(Chess.Lib.Team)
+  name: Queen(Team)
+  href: api/Chess.Lib.Pieces.Queen.html#Chess_Lib_Pieces_Queen__ctor_Chess_Lib_Team_
+  commentId: M:Chess.Lib.Pieces.Queen.#ctor(Chess.Lib.Team)
+  fullName: Chess.Lib.Pieces.Queen.Queen(Chess.Lib.Team)
+  nameWithType: Queen.Queen(Team)
 - uid: Chess.Lib.Pieces.Queen.#ctor*
   name: Queen
   href: api/Chess.Lib.Pieces.Queen.html#Chess_Lib_Pieces_Queen__ctor_
@@ -300,12 +269,12 @@ references:
   commentId: T:Chess.Lib.Pieces.Rook
   fullName: Chess.Lib.Pieces.Rook
   nameWithType: Rook
-- uid: Chess.Lib.Pieces.Rook.#ctor(System.Drawing.Color)
-  name: Rook(Color)
-  href: api/Chess.Lib.Pieces.Rook.html#Chess_Lib_Pieces_Rook__ctor_System_Drawing_Color_
-  commentId: M:Chess.Lib.Pieces.Rook.#ctor(System.Drawing.Color)
-  fullName: Chess.Lib.Pieces.Rook.Rook(System.Drawing.Color)
-  nameWithType: Rook.Rook(Color)
+- uid: Chess.Lib.Pieces.Rook.#ctor(Chess.Lib.Team)
+  name: Rook(Team)
+  href: api/Chess.Lib.Pieces.Rook.html#Chess_Lib_Pieces_Rook__ctor_Chess_Lib_Team_
+  commentId: M:Chess.Lib.Pieces.Rook.#ctor(Chess.Lib.Team)
+  fullName: Chess.Lib.Pieces.Rook.Rook(Chess.Lib.Team)
+  nameWithType: Rook.Rook(Team)
 - uid: Chess.Lib.Pieces.Rook.#ctor*
   name: Rook
   href: api/Chess.Lib.Pieces.Rook.html#Chess_Lib_Pieces_Rook__ctor_
@@ -326,3 +295,71 @@ references:
   isSpec: "True"
   fullName: Chess.Lib.Pieces.Rook.ToString
   nameWithType: Rook.ToString
+- uid: Chess.Lib.Team
+  name: Team
+  href: api/Chess.Lib.Team.html
+  commentId: T:Chess.Lib.Team
+  fullName: Chess.Lib.Team
+  nameWithType: Team
+- uid: Chess.Lib.Team.Black
+  name: Black
+  href: api/Chess.Lib.Team.html#Chess_Lib_Team_Black
+  commentId: F:Chess.Lib.Team.Black
+  fullName: Chess.Lib.Team.Black
+  nameWithType: Team.Black
+- uid: Chess.Lib.Team.White
+  name: White
+  href: api/Chess.Lib.Team.html#Chess_Lib_Team_White
+  commentId: F:Chess.Lib.Team.White
+  fullName: Chess.Lib.Team.White
+  nameWithType: Team.White
+- uid: Chess.Lib.Tiles
+  name: Chess.Lib.Tiles
+  href: api/Chess.Lib.Tiles.html
+  commentId: N:Chess.Lib.Tiles
+  fullName: Chess.Lib.Tiles
+  nameWithType: Chess.Lib.Tiles
+- uid: Chess.Lib.Tiles.EmptyTile
+  name: EmptyTile
+  href: api/Chess.Lib.Tiles.EmptyTile.html
+  commentId: T:Chess.Lib.Tiles.EmptyTile
+  fullName: Chess.Lib.Tiles.EmptyTile
+  nameWithType: EmptyTile
+- uid: Chess.Lib.Tiles.ITile
+  name: ITile
+  href: api/Chess.Lib.Tiles.ITile.html
+  commentId: T:Chess.Lib.Tiles.ITile
+  fullName: Chess.Lib.Tiles.ITile
+  nameWithType: ITile
+- uid: Chess.Lib.Tiles.OccupiedTile
+  name: OccupiedTile
+  href: api/Chess.Lib.Tiles.OccupiedTile.html
+  commentId: T:Chess.Lib.Tiles.OccupiedTile
+  fullName: Chess.Lib.Tiles.OccupiedTile
+  nameWithType: OccupiedTile
+- uid: Chess.Lib.Tiles.OccupiedTile.#ctor(Chess.Lib.Pieces.Piece)
+  name: OccupiedTile(Piece)
+  href: api/Chess.Lib.Tiles.OccupiedTile.html#Chess_Lib_Tiles_OccupiedTile__ctor_Chess_Lib_Pieces_Piece_
+  commentId: M:Chess.Lib.Tiles.OccupiedTile.#ctor(Chess.Lib.Pieces.Piece)
+  fullName: Chess.Lib.Tiles.OccupiedTile.OccupiedTile(Chess.Lib.Pieces.Piece)
+  nameWithType: OccupiedTile.OccupiedTile(Piece)
+- uid: Chess.Lib.Tiles.OccupiedTile.#ctor*
+  name: OccupiedTile
+  href: api/Chess.Lib.Tiles.OccupiedTile.html#Chess_Lib_Tiles_OccupiedTile__ctor_
+  commentId: Overload:Chess.Lib.Tiles.OccupiedTile.#ctor
+  isSpec: "True"
+  fullName: Chess.Lib.Tiles.OccupiedTile.OccupiedTile
+  nameWithType: OccupiedTile.OccupiedTile
+- uid: Chess.Lib.Tiles.OccupiedTile.Piece
+  name: Piece
+  href: api/Chess.Lib.Tiles.OccupiedTile.html#Chess_Lib_Tiles_OccupiedTile_Piece
+  commentId: P:Chess.Lib.Tiles.OccupiedTile.Piece
+  fullName: Chess.Lib.Tiles.OccupiedTile.Piece
+  nameWithType: OccupiedTile.Piece
+- uid: Chess.Lib.Tiles.OccupiedTile.Piece*
+  name: Piece
+  href: api/Chess.Lib.Tiles.OccupiedTile.html#Chess_Lib_Tiles_OccupiedTile_Piece_
+  commentId: Overload:Chess.Lib.Tiles.OccupiedTile.Piece
+  isSpec: "True"
+  fullName: Chess.Lib.Tiles.OccupiedTile.Piece
+  nameWithType: OccupiedTile.Piece
