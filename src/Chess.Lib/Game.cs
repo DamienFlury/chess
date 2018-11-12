@@ -2,6 +2,7 @@ using System;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using Chess.Lib.Pieces;
+using Chess.Lib.Tiles;
 
 namespace Chess.Lib
 {

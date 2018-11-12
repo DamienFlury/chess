@@ -2,6 +2,7 @@
 using System.ComponentModel;
 using Chess.Lib;
 using Chess.Lib.Pieces;
+using Chess.Lib.Tiles;
 
 namespace Chess.App
 {
@@ -55,6 +56,7 @@ namespace Chess.App
                     }
 
                     Console.Write(' ');
+
                 }
 
                 Console.WriteLine();

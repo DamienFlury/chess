@@ -1,8 +1,9 @@
 using System;
 using Chess.Lib.Pieces;
 
-namespace Chess.Lib
+namespace Chess.Lib.Tiles
 {
+    /// <inheritdoc />
     /// <summary>
     /// A tile that is able to include a piece. Immutable.
     /// </summary>

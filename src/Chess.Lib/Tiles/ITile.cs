@@ -1,4 +1,4 @@
-namespace Chess.Lib
+namespace Chess.Lib.Tiles
 {
     /// <summary>
     /// The interface of tiles.
