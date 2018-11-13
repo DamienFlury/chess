@@ -11,7 +11,7 @@ namespace Chess.Lib
     /// </summary>
     public sealed class Game
     {
-        private Game(string whitePlayerName, string blackPlayerName, ITile[,] board)
+        private Game(string whitePlayerName, string blackPlayerName, Board board)
         {
             whitePlayerName = whitePlayerName ?? throw new ArgumentNullException(nameof(whitePlayerName));
             blackPlayerName = blackPlayerName ?? throw new ArgumentNullException(nameof(blackPlayerName));
@@ -33,56 +33,56 @@ namespace Chess.Lib
         {
         }
 
-        private static ITile[,] GetStartingTiles()
+        private static Board GetStartingTiles()
         {
-            var board = new ITile[8, 8];
-            board[0, 0] = new OccupiedTile(new Rook(Team.Black));
-            board[1, 0] = new OccupiedTile(new Knight(Team.Black));
-            board[2, 0] = new OccupiedTile(new Bishop(Team.Black));
-            board[3, 0] = new OccupiedTile(new Queen(Team.Black));
-            board[4, 0] = new OccupiedTile(new King(Team.Black));
-            board[5, 0] = new OccupiedTile(new Bishop(Team.Black));
-            board[6, 0] = new OccupiedTile(new Knight(Team.Black));
-            board[7, 0] = new OccupiedTile(new Rook(Team.Black));
+            var tiles = new ITile[8, 8];
+            tiles[0, 0] = new OccupiedTile(new Rook(Team.Black));
+            tiles[1, 0] = new OccupiedTile(new Knight(Team.Black));
+            tiles[2, 0] = new OccupiedTile(new Bishop(Team.Black));
+            tiles[3, 0] = new OccupiedTile(new Queen(Team.Black));
+            tiles[4, 0] = new OccupiedTile(new King(Team.Black));
+            tiles[5, 0] = new OccupiedTile(new Bishop(Team.Black));
+            tiles[6, 0] = new OccupiedTile(new Knight(Team.Black));
+            tiles[7, 0] = new OccupiedTile(new Rook(Team.Black));
 
             //Pawns
-            board[0, 1] = new OccupiedTile(new Pawn(Team.Black));
-            board[1, 1] = new OccupiedTile(new Pawn(Team.Black));
-            board[2, 1] = new OccupiedTile(new Pawn(Team.Black));
-            board[3, 1] = new OccupiedTile(new Pawn(Team.Black));
-            board[4, 1] = new OccupiedTile(new Pawn(Team.Black));
-            board[5, 1] = new OccupiedTile(new Pawn(Team.Black));
-            board[6, 1] = new OccupiedTile(new Pawn(Team.Black));
-            board[7, 1] = new OccupiedTile(new Pawn(Team.Black));
+            tiles[0, 1] = new OccupiedTile(new Pawn(Team.Black));
+            tiles[1, 1] = new OccupiedTile(new Pawn(Team.Black));
+            tiles[2, 1] = new OccupiedTile(new Pawn(Team.Black));
+            tiles[3, 1] = new OccupiedTile(new Pawn(Team.Black));
+            tiles[4, 1] = new OccupiedTile(new Pawn(Team.Black));
+            tiles[5, 1] = new OccupiedTile(new Pawn(Team.Black));
+            tiles[6, 1] = new OccupiedTile(new Pawn(Team.Black));
+            tiles[7, 1] = new OccupiedTile(new Pawn(Team.Black));
 
             for (var x = 0; x < 8; x++)
             {
                 for (var y = 2; y < 6; y++)
                 {
-                    board[x, y] = new EmptyTile();
+                    tiles[x, y] = new EmptyTile();
                 }
             }
 
 
-            board[0, 7] = new OccupiedTile(new Rook(Team.White));
-            board[1, 7] = new OccupiedTile(new Knight(Team.White));
-            board[2, 7] = new OccupiedTile(new Bishop(Team.White));
-            board[3, 7] = new OccupiedTile(new King(Team.White));
-            board[4, 7] = new OccupiedTile(new Queen(Team.White));
-            board[5, 7] = new OccupiedTile(new Bishop(Team.White));
-            board[6, 7] = new OccupiedTile(new Knight(Team.White));
-            board[7, 7] = new OccupiedTile(new Rook(Team.White));
+            tiles[0, 7] = new OccupiedTile(new Rook(Team.White));
+            tiles[1, 7] = new OccupiedTile(new Knight(Team.White));
+            tiles[2, 7] = new OccupiedTile(new Bishop(Team.White));
+            tiles[3, 7] = new OccupiedTile(new King(Team.White));
+            tiles[4, 7] = new OccupiedTile(new Queen(Team.White));
+            tiles[5, 7] = new OccupiedTile(new Bishop(Team.White));
+            tiles[6, 7] = new OccupiedTile(new Knight(Team.White));
+            tiles[7, 7] = new OccupiedTile(new Rook(Team.White));
 
-            board[0, 6] = new OccupiedTile(new Pawn(Team.White));
-            board[1, 6] = new OccupiedTile(new Pawn(Team.White));
-            board[2, 6] = new OccupiedTile(new Pawn(Team.White));
-            board[3, 6] = new OccupiedTile(new Pawn(Team.White));
-            board[4, 6] = new OccupiedTile(new Pawn(Team.White));
-            board[5, 6] = new OccupiedTile(new Pawn(Team.White));
-            board[6, 6] = new OccupiedTile(new Pawn(Team.White));
-            board[7, 6] = new OccupiedTile(new Pawn(Team.White));
+            tiles[0, 6] = new OccupiedTile(new Pawn(Team.White));
+            tiles[1, 6] = new OccupiedTile(new Pawn(Team.White));
+            tiles[2, 6] = new OccupiedTile(new Pawn(Team.White));
+            tiles[3, 6] = new OccupiedTile(new Pawn(Team.White));
+            tiles[4, 6] = new OccupiedTile(new Pawn(Team.White));
+            tiles[5, 6] = new OccupiedTile(new Pawn(Team.White));
+            tiles[6, 6] = new OccupiedTile(new Pawn(Team.White));
+            tiles[7, 6] = new OccupiedTile(new Pawn(Team.White));
 
-            return board;
+            return new Board(tiles);
         }
 
 
@@ -92,7 +92,7 @@ namespace Chess.Lib
         /// <summary>
         /// The board. Contains either occupied tiles or Empty tiles. Null should never be used.
         /// </summary>
-        public ITile[,] Board { get; }
+        public Board Board { get; }
 
         /// <summary>
         /// Moves a piece.
@@ -119,13 +119,18 @@ namespace Chess.Lib
             if (destinationTile is OccupiedTile occupiedTile && occupiedTile.Piece.Team == piece.Team)
                 throw new IllegalMoveException("Cannot capture your own piece");
 
+            var nextTiles = new ITile[8, 8];
+            for (var y = 0; y < 8; y++)
+            {
+                for (var x = 0; x < 8; x++)
+                {
+                    nextTiles[x, y] = Board[x, y];
+                }
+            }
+            nextTiles[xCurrent, yCurrent] = new EmptyTile();
+            nextTiles[xDestination, yDestination] = currentTile;
 
-            var nextBoard = (ITile[,]) Board.Clone();
-
-            nextBoard[xCurrent, yCurrent] = new EmptyTile();
-            nextBoard[xDestination, yDestination] = currentTile;
-
-            return new Game(Player1.Name, Player2.Name, nextBoard);
+            return new Game(Player1.Name, Player2.Name, new Board(nextTiles));
         }
     }
 }
