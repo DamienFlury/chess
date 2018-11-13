@@ -6,7 +6,7 @@ using Chess.Lib.Tiles;
 
 namespace Chess.App
 {
-    class Program
+    internal static class Program
     {
         private static void Main(string[] args)
         {

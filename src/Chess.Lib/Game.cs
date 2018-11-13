@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using Chess.Lib.Pieces;
 using Chess.Lib.Tiles;
 
@@ -106,6 +107,12 @@ namespace Chess.Lib
         {
             if (!(Board[xCurrent, yCurrent] is OccupiedTile currentTile))
                 throw new ArgumentException("Current tile can't be empty");
+
+            var piece = currentTile.Piece;
+            
+            var move = new Move(xDestination - xCurrent, yDestination - yCurrent);
+
+            if (!piece.PossibleMoves.Contains(move)) throw new IllegalMoveException("This move is illegal");
 
             var destinationTile = Board[xDestination, yDestination];
             

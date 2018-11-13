@@ -55,5 +55,25 @@ namespace Chess.Lib.Tests
             Assert.True(gameAfterMove.Board[0, 0] is EmptyTile);
             Assert.True(gameAfterMove.Board[0, 3] is OccupiedTile occupiedTileAfterMove && occupiedTileAfterMove.Piece is Rook);
         }
+
+        [Fact]
+        public void IllegalMoveException_Test()
+        {
+            var game = new Game("", "");
+            Assert.Throws<IllegalMoveException>(() => game.Move(0, 0, 1, 1));
+            Assert.Throws<IllegalMoveException>(() => game.Move(1, 0, 0, 3));
+            
+            Assert.True(game.Board[2, 3] is EmptyTile);
+
+            var ex = Record.Exception(() => game.Move(2, 1, 2, 3));
+            Assert.Null(ex);
+
+            var gameAfterMove = game.Move(2, 0, 4, 2);
+
+            Assert.Throws<IllegalMoveException>(() => gameAfterMove.Move(4, 2, 4, 7));
+            
+            var ex2 = Record.Exception(() => gameAfterMove.Move(4, 2, 5, 3));
+            Assert.Null(ex2);
+        }
     }
 }
