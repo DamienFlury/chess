@@ -2,6 +2,7 @@
 using System.ComponentModel;
 using Chess.Lib;
 using Chess.Lib.Pieces;
+using Chess.Lib.Tiles;
 
 namespace Chess.App
 {
@@ -10,6 +11,10 @@ namespace Chess.App
         private static void Main(string[] args)
         {
             var game = new Game("Test", "Test2");
+            DrawBoardToConsoleSimplified(game);
+            Console.WriteLine();
+            DrawBoardToConsoleSimplified(game.Move(0, 0, 0, 3));
+            Console.WriteLine();
             DrawBoardToConsoleSimplified(game);
         }
 
@@ -45,7 +50,9 @@ namespace Chess.App
                 {
                     if (game.Board[x, y] is OccupiedTile occupiedTile)
                     {
+                        Console.ForegroundColor = occupiedTile.Piece.Team == Team.Black ? ConsoleColor.Cyan : ConsoleColor.Yellow;
                         Console.Write(occupiedTile.Piece.ToString().ToUpperInvariant()[0]);
+                        Console.ResetColor();
                     }
                     else
                     {
@@ -53,6 +60,7 @@ namespace Chess.App
                     }
 
                     Console.Write(' ');
+
                 }
 
                 Console.WriteLine();
