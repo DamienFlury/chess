@@ -75,5 +75,25 @@ namespace Chess.Lib.Tests
             var ex2 = Record.Exception(() => gameAfterMove.Move(4, 2, 5, 3));
             Assert.Null(ex2);
         }
+
+        [Fact]
+        public void IllegalMoveException_CaptureOwnPiece_Test()
+        {
+            var game = new Game("", "");
+            var tile = game.Board[4, 0];
+
+            Assert.True(tile is OccupiedTile occupiedTile && occupiedTile.Piece is King);
+
+            var ex = Record.Exception(() => game.Move(4, 0, 5, 0));
+            
+            Assert.IsType<IllegalMoveException>(ex);
+            Assert.True(ex.Message == "Cannot capture your own piece");
+        }
+
+        [Fact]
+        public void CaptureEnemyPiece_Test()
+        {
+            
+        }
     }
 }

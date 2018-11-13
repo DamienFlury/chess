@@ -93,7 +93,7 @@ namespace Chess.Lib
         /// The board. Contains either occupied tiles or Empty tiles. Null should never be used.
         /// </summary>
         public ITile[,] Board { get; }
-        
+
         /// <summary>
         /// Moves a piece.
         /// </summary>
@@ -109,26 +109,18 @@ namespace Chess.Lib
                 throw new ArgumentException("Current tile can't be empty");
 
             var piece = currentTile.Piece;
-            
+
             var move = new Move(xDestination - xCurrent, yDestination - yCurrent);
 
             if (!piece.PossibleMoves.Contains(move)) throw new IllegalMoveException("This move is illegal");
 
             var destinationTile = Board[xDestination, yDestination];
-            
-            //TODO: Allow destination tile to be occupied with the opposing color and implement capturing.
-            if (destinationTile is OccupiedTile)
-                throw new ArgumentException("Destination tile cannot be occupied at the moment");
 
-            var nextBoard = new ITile[8, 8];
+            if (destinationTile is OccupiedTile occupiedTile && occupiedTile.Piece.Team == piece.Team)
+                throw new IllegalMoveException("Cannot capture your own piece");
 
-            for (var y = 0; y < 8; y++)
-            {
-                for (var x = 0; x < 8; x++)
-                {
-                    nextBoard[x, y] = Board[x, y];
-                }
-            }
+
+            var nextBoard = (ITile[,]) Board.Clone();
 
             nextBoard[xCurrent, yCurrent] = new EmptyTile();
             nextBoard[xDestination, yDestination] = currentTile;
