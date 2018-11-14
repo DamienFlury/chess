@@ -6,10 +6,7 @@ namespace Chess.Lib.Pieces
 {
     public class Knight : IPiece
     {
-        public Knight(Team team)
-        {
-            Team = team;
-        }
+        public Knight(Team team) => Team = team;
 
 
         public override string ToString() => "Knight";

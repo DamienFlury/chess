@@ -13,7 +13,7 @@ namespace Chess.App
             var game = new Game("Test", "Test2");
             DrawBoardToConsoleSimplified(game);
             Console.WriteLine();
-            DrawBoardToConsoleSimplified(game.Move(0, 0, 0, 3));
+            DrawBoardToConsoleSimplified(game.Move(new Point(0, 0), new Point(0, 3)));
             Console.WriteLine();
             DrawBoardToConsoleSimplified(game);
         }

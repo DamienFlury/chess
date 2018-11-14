@@ -6,10 +6,7 @@ namespace Chess.Lib.Pieces
 {
     public sealed class Pawn : IPiece
     {
-        public Pawn(Team team)
-        {
-            Team = team;
-        }
+        public Pawn(Team team) => Team = team;
 
         public override string ToString() => "Pawn";
 

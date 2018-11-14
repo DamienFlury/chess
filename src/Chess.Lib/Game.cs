@@ -11,26 +11,11 @@ namespace Chess.Lib
     /// </summary>
     public sealed class Game
     {
-        private Game(string whitePlayerName, string blackPlayerName, Board board)
+        public Game(string whitePlayerName, string blackPlayerName, Board board = null)
         {
-            whitePlayerName = whitePlayerName ?? throw new ArgumentNullException(nameof(whitePlayerName));
-            blackPlayerName = blackPlayerName ?? throw new ArgumentNullException(nameof(blackPlayerName));
-
             Player1 = new Player(whitePlayerName, Team.White);
             Player2 = new Player(blackPlayerName, Team.Black);
-            Board = board;
-        }
-
-
-        /// <summary>
-        /// Creates a new game instance. Both player names can't be null.
-        /// Creates the board array of tiles as a starting game.
-        /// </summary>
-        /// <param name="whitePlayerName">No null allowed</param>
-        /// <param name="blackPlayerName">No null allowed</param>
-        public Game(string whitePlayerName, string blackPlayerName) : this(whitePlayerName, blackPlayerName,
-            GetStartingTiles())
-        {
+            Board = board ?? GetStartingTiles();
         }
 
         private static Board GetStartingTiles()

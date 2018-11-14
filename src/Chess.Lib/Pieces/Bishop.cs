@@ -5,10 +5,7 @@ namespace Chess.Lib.Pieces
 {
     public sealed class Bishop : IPiece
     {
-        public Bishop(Team team)
-        {
-            Team = team;
-        }
+        public Bishop(Team team) => Team = team;
 
         public override string ToString() => "Bishop";
         public Team Team { get; }

@@ -6,10 +6,7 @@ namespace Chess.Lib.Pieces
 {
     public sealed class Rook : IPiece
     {
-        public Rook(Team team)
-        {
-            Team = team;
-        }
+        public Rook(Team team) => Team = team;
 
         public override string ToString() => "Rook";
         public Team Team { get; }

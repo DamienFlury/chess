@@ -2,28 +2,21 @@ using System;
 
 namespace Chess.Lib
 {
-    public struct Move: IEquatable<Move>
+    public struct Move : IEquatable<Move>
     {
-        public Move(int x, int y)
-        {
-            X = x;
-            Y = y;
-        }
+        public Move(int x, int y) => (X, Y) = (x, y);
 
         public int X { get; }
         public int Y { get; }
 
         public bool Equals(Move other)
         {
-            if (ReferenceEquals(null, other)) return false;
-            if (ReferenceEquals(this, other)) return true;
             return X == other.X && Y == other.Y;
         }
 
         public override bool Equals(object obj)
         {
             if (ReferenceEquals(null, obj)) return false;
-            if (ReferenceEquals(this, obj)) return true;
             return obj is Move other && Equals(other);
         }
 
@@ -35,7 +28,16 @@ namespace Chess.Lib
             }
         }
 
-        public static bool operator ==(Move move1, Move move2) => Equals(move1, move2);
-        public static bool operator !=(Move move1, Move move2) => !Equals(move1, move2);
+        public static bool operator ==(Move left, Move right)
+        {
+            return left.Equals(right);
+        }
+
+        public static bool operator !=(Move left, Move right)
+        {
+            return !left.Equals(right);
+        }
+
+        public void Deconstruct(out int x, out int y) => (x, y) = (X, Y);
     }
 }
