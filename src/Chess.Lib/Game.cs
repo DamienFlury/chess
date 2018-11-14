@@ -97,24 +97,26 @@ namespace Chess.Lib
         /// <summary>
         /// Moves a piece.
         /// </summary>
-        /// <param name="xCurrent"></param>
-        /// <param name="yCurrent"></param>
-        /// <param name="xDestination"></param>
-        /// <param name="yDestination"></param>
+        /// <param name="current"></param>
+        /// <param name="destination"></param>
         /// <returns></returns>
         /// <exception cref="ArgumentException"></exception>
-        public Game Move(int xCurrent, int yCurrent, int xDestination, int yDestination)
+        public Game Move(Point current, Point destination)
         {
-            if (!(Board[xCurrent, yCurrent] is OccupiedTile currentTile))
+            var currentTile = Board[current.X, current.Y];
+
+            if (!(currentTile is OccupiedTile currentTileOccupied))
                 throw new ArgumentException("Current tile can't be empty");
 
-            var piece = currentTile.Piece;
+            var piece = currentTileOccupied.Piece;
 
-            var move = new Move(xDestination - xCurrent, yDestination - yCurrent);
+            var move = destination - current;
+
 
             if (!piece.PossibleMoves.Contains(move)) throw new IllegalMoveException("This move is illegal");
 
-            var destinationTile = Board[xDestination, yDestination];
+
+            var destinationTile = Board[destination.X, destination.Y];
 
             if (destinationTile is OccupiedTile occupiedTile && occupiedTile.Piece.Team == piece.Team)
                 throw new IllegalMoveException("Cannot capture your own piece");
@@ -127,8 +129,9 @@ namespace Chess.Lib
                     nextTiles[x, y] = Board[x, y];
                 }
             }
-            nextTiles[xCurrent, yCurrent] = new EmptyTile();
-            nextTiles[xDestination, yDestination] = currentTile;
+
+            nextTiles[current.X, current.Y] = new EmptyTile();
+            nextTiles[destination.X, destination.Y] = currentTile;
 
             return new Game(Player1.Name, Player2.Name, new Board(nextTiles));
         }

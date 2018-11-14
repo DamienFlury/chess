@@ -2,18 +2,18 @@ using System;
 
 namespace Chess.Lib
 {
-    public struct Move: IEquatable<Move>
+    public struct Point : IEquatable<Point>
     {
-        public Move(int x, int y)
+        public int X { get; }
+        public int Y { get; }
+
+        public Point(int x, int y)
         {
             X = x;
             Y = y;
         }
 
-        public int X { get; }
-        public int Y { get; }
-
-        public bool Equals(Move other)
+        public bool Equals(Point other)
         {
             if (ReferenceEquals(null, other)) return false;
             if (ReferenceEquals(this, other)) return true;
@@ -24,7 +24,8 @@ namespace Chess.Lib
         {
             if (ReferenceEquals(null, obj)) return false;
             if (ReferenceEquals(this, obj)) return true;
-            return obj is Move other && Equals(other);
+            if (obj.GetType() != this.GetType()) return false;
+            return Equals((Point) obj);
         }
 
         public override int GetHashCode()
@@ -35,7 +36,10 @@ namespace Chess.Lib
             }
         }
 
-        public static bool operator ==(Move move1, Move move2) => Equals(move1, move2);
-        public static bool operator !=(Move move1, Move move2) => !Equals(move1, move2);
+        public static bool operator ==(Point left, Point right) => Equals(left, right);
+
+        public static bool operator !=(Point left, Point right) => !Equals(left, right);
+
+        public static Move operator -(Point left, Point right) => new Move(left.X - right.X, left.Y - right.Y);
     }
 }
