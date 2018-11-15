@@ -20,5 +20,10 @@ namespace Chess.Lib.Pieces
                 yield return new Move(0, 2);
             }
         }
+
+        public bool HasPieceInTheWay(Point currentPosition, Move move, Board board)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

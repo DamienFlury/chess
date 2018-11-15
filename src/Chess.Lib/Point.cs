@@ -39,6 +39,8 @@ namespace Chess.Lib
         {
             return !left.Equals(right);
         }
+        
+        public static Point operator +(Point point, Move move) => new Point(point.X + move.X, point.Y + move.Y);
 
         public void Deconstruct(out int x, out int y) => (x, y) = (X, Y);
     }

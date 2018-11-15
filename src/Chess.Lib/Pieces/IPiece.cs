@@ -11,6 +11,6 @@ namespace Chess.Lib.Pieces
     {
         Team Team { get; }
         IEnumerable<Move> PossibleMoves { get; }
-//        bool IsInTheWay(Board board, Move move);
+        bool HasPieceInTheWay(Point currentPosition, Move move, Board board);
     }
 }

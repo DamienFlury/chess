@@ -24,5 +24,10 @@ namespace Chess.Lib.Pieces
                 }
             }
         }
+
+        public bool HasPieceInTheWay(Point currentPosition, Move move, Board board)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

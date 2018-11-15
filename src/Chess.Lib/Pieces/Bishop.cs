@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Chess.Lib.Pieces
 {
@@ -23,5 +24,18 @@ namespace Chess.Lib.Pieces
                 }
             }
         }
+
+        public bool HasPieceInTheWay(Point currentPosition, Move move, Board board)
+        {
+            if (!PossibleMoves.Contains(move)) throw new IllegalMoveException("Move not possible");
+            var destination = currentPosition + move;
+            if(IsOutOfBounds(destination)) throw new IllegalMoveException("Out of bounds");
+            
+            throw new NotImplementedException();
+            
+            
+        }
+
+        private static bool IsOutOfBounds(Point point) => point.X > 7 || point.Y > 7 || point.X < 0 || point.Y < 0;
     }
 }
