@@ -28,6 +28,8 @@ namespace Chess.Lib.Pieces
             }
         }
 
+        public bool IsPossibleMove(Point start, Point destination, Board board) => throw new NotImplementedException();
+
         public bool HasPieceInTheWay(Point currentPosition, Move move, Board board)
         {
             throw new NotImplementedException();

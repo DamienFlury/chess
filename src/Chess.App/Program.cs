@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Linq;
 using Chess.Lib;
 using Chess.Lib.Pieces;
 using Chess.Lib.Tiles;
@@ -15,7 +16,13 @@ namespace Chess.App
             Console.WriteLine();
             DrawBoardToConsoleSimplified(game.Move(new Point(0, 0), new Point(0, 3)));
             Console.WriteLine();
+
+            game = game.Move(new Point(0, 1), new Point(0, 3));
             DrawBoardToConsoleSimplified(game);
+
+            var rook = (game.Board[0, 0] as OccupiedTile)?.Piece;
+            Console.WriteLine(
+                rook?.IsPossibleMove(new Point(0, 0), new Point(0, 2), game.Board).ToString() ?? "Is null");
         }
 
         private static void DrawBoardToConsole()
@@ -50,7 +57,9 @@ namespace Chess.App
                 {
                     if (game.Board[x, y] is OccupiedTile occupiedTile)
                     {
-                        Console.ForegroundColor = occupiedTile.Piece.Team == Team.Black ? ConsoleColor.Cyan : ConsoleColor.Yellow;
+                        Console.ForegroundColor = occupiedTile.Piece.Team == Team.Black
+                            ? ConsoleColor.Cyan
+                            : ConsoleColor.Yellow;
                         Console.Write(occupiedTile.Piece.ToString().ToUpperInvariant()[0]);
                         Console.ResetColor();
                     }
@@ -60,7 +69,6 @@ namespace Chess.App
                     }
 
                     Console.Write(' ');
-
                 }
 
                 Console.WriteLine();
