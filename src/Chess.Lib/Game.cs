@@ -11,7 +11,7 @@ namespace Chess.Lib
     /// </summary>
     public sealed class Game
     {
-        public Game(string whitePlayerName, string blackPlayerName, Board board = null)
+        public Game(string whitePlayerName = "", string blackPlayerName = "", Board board = null)
         {
             Player1 = new Player(whitePlayerName, Team.White);
             Player2 = new Player(blackPlayerName, Team.Black);
@@ -97,8 +97,6 @@ namespace Chess.Lib
 
             var move = destination - current;
 
-
-            if (!piece.PossibleMoves.Contains(move)) throw new IllegalMoveException("This move is illegal");
 
 
             var destinationTile = Board[destination.X, destination.Y];

@@ -10,7 +10,6 @@ namespace Chess.Lib.Pieces
     public interface IPiece
     {
         Team Team { get; }
-        IEnumerable<Move> PossibleMoves { get; }
         bool IsPossibleMove(Point start, Point destination, Board board);
     }
 }
