@@ -21,8 +21,7 @@ namespace Chess.App
             DrawBoardToConsoleSimplified(game);
 
             var rook = (game.Board[0, 0] as OccupiedTile)?.Piece;
-            Console.WriteLine(
-                rook?.IsPossibleMove(new Point(0, 0), new Point(0, 2), game.Board).ToString() ?? "Is null");
+
         }
 
         private static void DrawBoardToConsole()

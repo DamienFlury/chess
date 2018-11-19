@@ -103,6 +103,8 @@ namespace Chess.Lib
 
             if (destinationTile is OccupiedTile occupiedTile && occupiedTile.Piece.Team == piece.Team)
                 throw new IllegalMoveException("Cannot capture your own piece");
+            
+            if(!piece.GetPossibleMoves(current, Board).Contains(move)) throw new IllegalMoveException("");
 
             var nextTiles = new ITile[8, 8];
             for (var y = 0; y < 8; y++)
