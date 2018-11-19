@@ -53,5 +53,40 @@ namespace Chess.Lib.Pieces
 
             return true;
         }
+
+        public IEnumerable<Move> GetPossibleMoves(Point current, Board board)
+        {
+            var currentPiece = (board[current.X, current.Y] as OccupiedTile)?.Piece ?? throw new ArgumentException();
+            for (var x = current.X; x < 8; x++)
+            {
+                var tile = board[x, 0];
+                if (IsOccupiedByOwnPiece(tile)) break;
+                yield return new Move(x, 0);
+            }
+
+            for (var x = current.X; x >= 0; x--)
+            {
+                var tile = board[x, 0];
+                if(IsOccupiedByOwnPiece(tile)) break;
+                yield return new Move(x, 0);
+            }
+
+            for (var y = current.Y; y < 8; y++)
+            {
+                var tile = board[0, y];
+                if (IsOccupiedByOwnPiece(tile)) break;
+                yield return new Move(0, y);
+            }
+
+            for (var y = current.Y; y >= 0; y++)
+            {
+                if (y == 0) continue;
+                var tile = board[0, y];
+                if (IsOccupiedByOwnPiece(tile)) break;
+                yield return new Move(0, y);
+            }
+
+            bool IsOccupiedByOwnPiece(ITile tile) => tile is OccupiedTile occupiedTile && occupiedTile.Piece.Team == currentPiece.Team;
+        }
     }
 }

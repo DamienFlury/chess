@@ -11,5 +11,7 @@ namespace Chess.Lib.Pieces
     {
         Team Team { get; }
         bool IsPossibleMove(Point start, Point destination, Board board);
+
+        IEnumerable<Move> GetPossibleMoves(Point current, Board board);
     }
 }

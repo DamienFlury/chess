@@ -31,6 +31,10 @@ namespace Chess.Lib.Pieces
         }
 
         public bool IsPossibleMove(Point start, Point destination, Board board) => throw new NotImplementedException();
+        public IEnumerable<Move> GetPossibleMoves(Point current, Board board)
+        {
+            throw new NotImplementedException();
+        }
 
         public bool HasPieceInTheWay(Point currentPosition, Move move, Board board)
         {
