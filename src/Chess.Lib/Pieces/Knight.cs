@@ -3,18 +3,19 @@ using System.Collections.Generic;
 
 namespace Chess.Lib.Pieces
 {
-    public class Knight : Piece
+    public class Knight : IPiece
     {
-        public Knight(Team team, bool hasBeenMoved = false) : base(team, hasBeenMoved)
-        {
-        }
+        public Knight(Team team, bool hasBeenMoved = false) => (Team, HasBeenMoved) = (team, hasBeenMoved);
 
         public override string ToString() => "Knight";
 
-        public override Piece With(Team? team = null, bool? hasBeenMoved = null) =>
+        public Team Team { get; }
+        public bool HasBeenMoved { get; }
+
+        public IPiece With(Team? team = null, bool? hasBeenMoved = null) =>
             new Knight(team ?? Team, hasBeenMoved ?? HasBeenMoved);
 
-        public override IEnumerable<Move> GetPossibleMoves(Point current, Board board)
+        public IEnumerable<Move> GetPossibleMoves(Point current, Board board)
         {
             var numbersToCheck = new[] {-2, -1, 1, 2};
 

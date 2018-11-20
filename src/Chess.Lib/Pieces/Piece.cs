@@ -7,13 +7,11 @@ namespace Chess.Lib.Pieces
     /// <summary>
     /// The interface of all pieces.
     /// </summary>
-    public abstract class Piece
+    public interface IPiece
     {
-        protected Piece(Team team, bool hasBeenMoved = false) => (Team, HasBeenMoved) = (team, hasBeenMoved);
-        
-        public Team Team { get; }
-        public bool HasBeenMoved { get; }
-        public abstract Piece With(Team? team = null, bool? hasBeenMoved = null);
-        public abstract IEnumerable<Move> GetPossibleMoves(Point current, Board board);
+        Team Team { get; }
+        bool HasBeenMoved { get; }
+        IPiece With(Team? team = null, bool? hasBeenMoved = null);
+        IEnumerable<Move> GetPossibleMoves(Point current, Board board);
     }
 }
