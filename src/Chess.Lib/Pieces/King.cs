@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 
 namespace Chess.Lib.Pieces
 {
@@ -15,9 +16,9 @@ namespace Chess.Lib.Pieces
 
         public IEnumerable<Move> GetPossibleMoves(Point current, Board board)
         {
-            throw new NotImplementedException();
+            return PossibleMovesHelper.GetStraightMoves(current, board)
+                .Concat(PossibleMovesHelper.GetDiagonalMoves(current, board)).Where(move =>
+                    move.X == 1 || move.X == -1 || move.Y == 1 || move.Y == -1);
         }
-
-
     }
 }

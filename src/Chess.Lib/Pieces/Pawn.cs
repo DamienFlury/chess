@@ -14,7 +14,8 @@ namespace Chess.Lib.Pieces
 
         public IEnumerable<Move> GetPossibleMoves(Point current, Board board)
         {
-            throw new NotImplementedException();
+            yield return new Move(0, 1);
+            yield return new Move(0, 2);
         }
 
     }
