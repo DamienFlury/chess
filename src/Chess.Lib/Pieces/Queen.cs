@@ -5,15 +5,17 @@ using System.Linq;
 
 namespace Chess.Lib.Pieces
 {
-    public sealed class Queen : IPiece
+    public sealed class Queen : Piece
     {
-        public Queen(Team team) => Team = team;
+        public Queen(Team team, bool hasBeenMoved = false) : base(team, hasBeenMoved)
+        {
+        }
 
         public override string ToString() => "Queen";
 
-        public Team Team { get; }
+        public override Piece With(Team? team = null, bool? hasBeenMoved = null) => new Queen(team ?? Team, hasBeenMoved ?? HasBeenMoved);
 
-        public IEnumerable<Move> GetPossibleMoves(Point current, Board board) => PossibleMovesHelper
+        public override IEnumerable<Move> GetPossibleMoves(Point current, Board board) => PossibleMovesHelper
             .GetDiagonalMoves(current, board).Concat(PossibleMovesHelper.GetStraightMoves(current, board));
 
     }

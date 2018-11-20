@@ -8,13 +8,17 @@ using Chess.Lib.Tiles;
 
 namespace Chess.Lib.Pieces
 {
-    public sealed class Rook : IPiece
+    public sealed class Rook : Piece
     {
-        public Rook(Team team) => Team = team;
+        public Rook(Team team, bool hasBeenMoved = false) : base(team, hasBeenMoved)
+        {
+        }
 
         public override string ToString() => "Rook";
-        public Team Team { get; }
 
-        public IEnumerable<Move> GetPossibleMoves(Point current, Board board) => PossibleMovesHelper.GetStraightMoves(current, board);
+        public override Piece With(Team? team = null, bool? hasBeenMoved = null) => new Rook(team ?? Team, hasBeenMoved ?? HasBeenMoved);
+
+        public override IEnumerable<Move> GetPossibleMoves(Point current, Board board) => PossibleMovesHelper.GetStraightMoves(current, board);
+
     }
 }

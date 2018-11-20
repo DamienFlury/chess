@@ -13,11 +13,11 @@ namespace Chess.Lib.Tiles
         /// Creates a new occupied tile with a piece. The piece can't be null.
         /// </summary>
         /// <param name="piece">No null allowed</param>
-        public OccupiedTile(IPiece piece) => Piece = piece;
+        public OccupiedTile(Piece piece) => Piece = piece;
         
         /// <summary>
         /// Holds the piece. Can't be changed.
         /// </summary>
-        public IPiece Piece { get; }
+        public Piece Piece { get; }
     }
 }

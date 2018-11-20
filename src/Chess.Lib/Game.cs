@@ -98,13 +98,12 @@ namespace Chess.Lib
             var move = destination - current;
 
 
-
             var destinationTile = Board[destination.X, destination.Y];
 
             if (destinationTile is OccupiedTile occupiedTile && occupiedTile.Piece.Team == piece.Team)
                 throw new IllegalMoveException("Cannot capture your own piece");
-            
-            if(!piece.GetPossibleMoves(current, Board).Contains(move)) throw new IllegalMoveException("");
+
+            if (!piece.GetPossibleMoves(current, Board).Contains(move)) throw new IllegalMoveException("");
 
             var nextTiles = new ITile[8, 8];
             for (var y = 0; y < 8; y++)
@@ -116,7 +115,7 @@ namespace Chess.Lib
             }
 
             nextTiles[current.X, current.Y] = new EmptyTile();
-            nextTiles[destination.X, destination.Y] = currentTile;
+            nextTiles[destination.X, destination.Y] = new OccupiedTile(piece.With(hasBeenMoved: true));
 
             return new Game(Player1.Name, Player2.Name, new Board(nextTiles));
         }
