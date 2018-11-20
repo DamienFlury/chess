@@ -1,0 +1,64 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chess.Lib.Pieces
+  commentId: N:Chess.Lib.Pieces
+  id: Chess.Lib.Pieces
+  children:
+  - Chess.Lib.Pieces.Bishop
+  - Chess.Lib.Pieces.King
+  - Chess.Lib.Pieces.Knight
+  - Chess.Lib.Pieces.Pawn
+  - Chess.Lib.Pieces.Piece
+  - Chess.Lib.Pieces.Queen
+  - Chess.Lib.Pieces.Rook
+  langs:
+  - csharp
+  - vb
+  name: Chess.Lib.Pieces
+  nameWithType: Chess.Lib.Pieces
+  fullName: Chess.Lib.Pieces
+  type: Namespace
+  assemblies:
+  - Chess.Lib
+references:
+- uid: Chess.Lib.Pieces.Bishop
+  commentId: T:Chess.Lib.Pieces.Bishop
+  name: Bishop
+  nameWithType: Bishop
+  fullName: Chess.Lib.Pieces.Bishop
+- uid: Chess.Lib.Pieces.King
+  commentId: T:Chess.Lib.Pieces.King
+  name: King
+  nameWithType: King
+  fullName: Chess.Lib.Pieces.King
+- uid: Chess.Lib.Pieces.Knight
+  commentId: T:Chess.Lib.Pieces.Knight
+  name: Knight
+  nameWithType: Knight
+  fullName: Chess.Lib.Pieces.Knight
+- uid: Chess.Lib.Pieces.Pawn
+  commentId: T:Chess.Lib.Pieces.Pawn
+  name: Pawn
+  nameWithType: Pawn
+  fullName: Chess.Lib.Pieces.Pawn
+- uid: Chess.Lib.Pieces.Piece
+  commentId: T:Chess.Lib.Pieces.Piece
+  parent: Chess.Lib.Pieces
+  name: Piece
+  nameWithType: Piece
+  fullName: Chess.Lib.Pieces.Piece
+- uid: Chess.Lib.Pieces.Queen
+  commentId: T:Chess.Lib.Pieces.Queen
+  name: Queen
+  nameWithType: Queen
+  fullName: Chess.Lib.Pieces.Queen
+- uid: Chess.Lib.Pieces.Rook
+  commentId: T:Chess.Lib.Pieces.Rook
+  name: Rook
+  nameWithType: Rook
+  fullName: Chess.Lib.Pieces.Rook
+- uid: Chess.Lib.Pieces
+  commentId: N:Chess.Lib.Pieces
+  name: Chess.Lib.Pieces
+  nameWithType: Chess.Lib.Pieces
+  fullName: Chess.Lib.Pieces

@@ -1,0 +1,114 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chess.Lib.Team
+  commentId: T:Chess.Lib.Team
+  id: Team
+  parent: Chess.Lib
+  children:
+  - Chess.Lib.Team.Black
+  - Chess.Lib.Team.White
+  langs:
+  - csharp
+  - vb
+  name: Team
+  nameWithType: Team
+  fullName: Chess.Lib.Team
+  type: Enum
+  source:
+    remote:
+      path: src/Chess.Lib/Team.cs
+      branch: develop
+      repo: https://github.com/DamienFlury/chess.git
+    id: Team
+    path: src/Chess.Lib/Team.cs
+    startLine: 5
+  assemblies:
+  - Chess.Lib
+  namespace: Chess.Lib
+  summary: "\nThe team/color of a player/piece.\n"
+  example: []
+  syntax:
+    content: public enum Team
+    content.vb: Public Enum Team
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Chess.Lib.Team.White
+  commentId: F:Chess.Lib.Team.White
+  id: White
+  parent: Chess.Lib.Team
+  langs:
+  - csharp
+  - vb
+  name: White
+  nameWithType: Team.White
+  fullName: Chess.Lib.Team.White
+  type: Field
+  source:
+    remote:
+      path: src/Chess.Lib/Team.cs
+      branch: develop
+      repo: https://github.com/DamienFlury/chess.git
+    id: White
+    path: src/Chess.Lib/Team.cs
+    startLine: 7
+  assemblies:
+  - Chess.Lib
+  namespace: Chess.Lib
+  syntax:
+    content: White = 0
+    return:
+      type: Chess.Lib.Team
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Chess.Lib.Team.Black
+  commentId: F:Chess.Lib.Team.Black
+  id: Black
+  parent: Chess.Lib.Team
+  langs:
+  - csharp
+  - vb
+  name: Black
+  nameWithType: Team.Black
+  fullName: Chess.Lib.Team.Black
+  type: Field
+  source:
+    remote:
+      path: src/Chess.Lib/Team.cs
+      branch: develop
+      repo: https://github.com/DamienFlury/chess.git
+    id: Black
+    path: src/Chess.Lib/Team.cs
+    startLine: 8
+  assemblies:
+  - Chess.Lib
+  namespace: Chess.Lib
+  syntax:
+    content: Black = 1
+    return:
+      type: Chess.Lib.Team
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Chess.Lib
+  commentId: N:Chess.Lib
+  name: Chess.Lib
+  nameWithType: Chess.Lib
+  fullName: Chess.Lib
+- uid: Chess.Lib.Team
+  commentId: T:Chess.Lib.Team
+  parent: Chess.Lib
+  name: Team
+  nameWithType: Team
+  fullName: Chess.Lib.Team

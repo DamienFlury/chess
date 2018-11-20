@@ -70,7 +70,7 @@ namespace Chess.Lib.Tests
         {
             var game = new Game("", "");
             var tile = game.Board[4, 0];
-
+            
             Assert.True(tile is OccupiedTile occupiedTile && occupiedTile.Piece is King);
 
             var ex = Record.Exception(() => game.Move(new Point(4, 0), new Point(5, 0)));
