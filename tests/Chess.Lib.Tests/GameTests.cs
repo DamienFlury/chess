@@ -47,14 +47,7 @@ namespace Chess.Lib.Tests
         {
             var game = new Game("First", "Second");
 
-            var gameAfterMove = game.Move(new Point(0, 0), new Point(0, 3));
-
-            Assert.True(game.Board[0, 0] is OccupiedTile occupiedTile && occupiedTile.Piece is Rook);
-            Assert.True(game.Board[0, 3] is EmptyTile);
-
-            Assert.True(gameAfterMove.Board[0, 0] is EmptyTile);
-            Assert.True(gameAfterMove.Board[0, 3] is OccupiedTile occupiedTileAfterMove &&
-                        occupiedTileAfterMove.Piece is Rook);
+            Assert.Throws<IllegalMoveException>(() => game.Move(new Point(0, 0), new Point(0, 3)));
         }
 
         [Fact]
@@ -69,12 +62,7 @@ namespace Chess.Lib.Tests
             var ex = Record.Exception(() => game.Move(new Point(2, 1), new Point(2, 3)));
             Assert.Null(ex);
 
-            var gameAfterMove = game.Move(new Point(2, 0), new Point(4, 2));
-
-            Assert.Throws<IllegalMoveException>(() => gameAfterMove.Move(new Point(4, 2), new Point(4, 7)));
-
-            var ex2 = Record.Exception(() => gameAfterMove.Move(new Point(4, 2), new Point(5, 3)));
-            Assert.Null(ex2);
+            Assert.Throws<IllegalMoveException>(() => game.Move(new Point(2, 0), new Point(4, 2)));
         }
 
         [Fact]

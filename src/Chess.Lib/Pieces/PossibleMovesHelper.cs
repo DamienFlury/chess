@@ -73,7 +73,7 @@ namespace Chess.Lib.Pieces
                 yield return new Move(x, y);
             }
 
-            for (var i = 1; current.X - i > 0 && current.Y + i > 0; i++)
+            for (var i = 1; current.X - i > 0 && current.Y - i > 0; i++)
             {
                 var x = current.X - i;
                 var y = current.Y - i;

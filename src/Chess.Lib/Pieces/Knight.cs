@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 
 namespace Chess.Lib.Pieces
 {
@@ -31,6 +30,5 @@ namespace Chess.Lib.Pieces
                 }
             }
         }
-
     }
 }
