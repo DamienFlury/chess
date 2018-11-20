@@ -13,30 +13,30 @@ namespace Chess.Lib.Pieces
             var team = occupiedTile.Piece.Team;
             for (var x = current.X + 1; x < 8; x++)
             {
-                var tile = board[x, 0];
+                var tile = board[x, current.Y];
                 if (IsOccupiedBySameTeam(team, tile)) break;
-                yield return new Move(x, 0);
+                yield return new Move(x - current.X, 0);
             }
 
             for (var x = current.X - 1; x >= 0; x--)
             {
-                var tile = board[x, 0];
+                var tile = board[x, current.Y];
                 if (IsOccupiedBySameTeam(team, tile)) break;
-                yield return new Move(x, 0);
+                yield return new Move(x - current.X, 0);
             }
 
             for (var y = current.Y + 1; y < 8; y++)
             {
-                var tile = board[0, y];
+                var tile = board[current.X, y];
                 if (IsOccupiedBySameTeam(team, tile)) break;
-                yield return new Move(0, y);
+                yield return new Move(0, y - current.Y);
             }
 
             for (var y = current.Y - 1; y >= 0; y++)
             {
-                var tile = board[0, y];
+                var tile = board[current.X, y];
                 if (IsOccupiedBySameTeam(team, tile)) break;
-                yield return new Move(0, y);
+                yield return new Move(0, y - current.Y);
             }
         }
 
@@ -52,7 +52,7 @@ namespace Chess.Lib.Pieces
                 var y = current.Y + i;
                 var tile = board[x, y];
                 if (IsOccupiedBySameTeam(team, tile)) break;
-                yield return new Move(x, y);
+                yield return new Move(x - current.X, y - current.Y);
             }
 
             for (var i = 1; current.X + i < 8 && current.Y - i > 0; i++)
@@ -61,7 +61,7 @@ namespace Chess.Lib.Pieces
                 var y = current.Y - i;
                 var tile = board[x, y];
                 if (IsOccupiedBySameTeam(team, tile)) break;
-                yield return new Move(x, y);
+                yield return new Move(x - current.X, y - current.Y);
             }
 
             for (var i = 1; current.X - i > 0 && current.Y + i < 8; i++)
@@ -70,7 +70,7 @@ namespace Chess.Lib.Pieces
                 var y = current.Y + i;
                 var tile = board[x, y];
                 if (IsOccupiedBySameTeam(team, tile)) break;
-                yield return new Move(x, y);
+                yield return new Move(x - current.X, y - current.Y);
             }
 
             for (var i = 1; current.X - i > 0 && current.Y - i > 0; i++)
@@ -79,7 +79,7 @@ namespace Chess.Lib.Pieces
                 var y = current.Y - i;
                 var tile = board[x, y];
                 if (IsOccupiedBySameTeam(team, tile)) break;
-                yield return new Move(x, y);
+                yield return new Move(x - current.X, y - current.Y);
             }
         }
 

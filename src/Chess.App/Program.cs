@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using Chess.Lib;
 using Chess.Lib.Pieces;
 using Chess.Lib.Tiles;
@@ -13,14 +14,22 @@ namespace Chess.App
         {
             var game = new Game("Test", "Test2");
             DrawBoardToConsoleSimplified(game);
-            Console.WriteLine();
-            DrawBoardToConsoleSimplified(game.Move(new Point(0, 0), new Point(0, 3)));
-            Console.WriteLine();
 
-            game = game.Move(new Point(0, 1), new Point(0, 3));
-            DrawBoardToConsoleSimplified(game);
+            while (true)
+            {
+                Console.Write("x = ");
+                var xCurrent = int.Parse(Console.ReadLine());
+                Console.Write("y = ");
+                var yCurrent = int.Parse(Console.ReadLine());
+                Console.WriteLine();
+                Console.Write("x (destination) = ");
+                var xDestination = int.Parse(Console.ReadLine());
+                Console.Write("y (destination) = ");
+                var yDestination = int.Parse(Console.ReadLine());
 
-            var rook = (game.Board[0, 0] as OccupiedTile)?.Piece;
+                game = game.Move(new Point(xCurrent, yCurrent), new Point(xDestination, yDestination));
+                DrawBoardToConsoleSimplified(game);
+            }
 
         }
 
