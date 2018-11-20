@@ -16,7 +16,7 @@ namespace Chess.Lib.Tests.Pieces
             var game = new Game();
             var rook = (game.Board[0, 0] as OccupiedTile)?.Piece;
             Assert.NotNull(rook);
-            Assert.False(rook.GetPossibleMoves(new Point(0, 0), game.Board).Any());
+            Assert.Empty(rook.GetPossibleMoves(new Point(0, 0), game.Board));
         }
 
         [Fact]

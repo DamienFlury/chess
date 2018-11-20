@@ -13,7 +13,7 @@
   </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\..\src\Chess.Lib\Chess.Lib.csproj"/>
+      <ProjectReference Include="..\..\src\Chess.Lib\Chess.Lib.csproj"/>
     </ItemGroup>
 
 </Project>
