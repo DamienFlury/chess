@@ -1,0 +1,538 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chess.Lib.Game
+  commentId: T:Chess.Lib.Game
+  id: Game
+  parent: Chess.Lib
+  children:
+  - Chess.Lib.Game.#ctor(System.String,System.String)
+  - Chess.Lib.Game.Board
+  - Chess.Lib.Game.Move(System.Int32,System.Int32,System.Int32,System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: Game
+  nameWithType: Game
+  fullName: Chess.Lib.Game
+  type: Class
+  source:
+    remote:
+      path: src/Chess.Lib/Game.cs
+      branch: develop
+      repo: https://github.com/DamienFlury/chess.git
+    id: Game
+    path: src/Chess.Lib/Game.cs
+    startLine: 10
+  assemblies:
+  - Chess.Lib
+  namespace: Chess.Lib
+  summary: "\nHas the board as two-dimensional array of tiles. Also know both players.\nShallow immutable (planning on making the array an immutable collection to provide full immutability).\n"
+  example: []
+  syntax:
+    content: public sealed class Game
+    content.vb: Public NotInheritable Class Game
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Chess.Lib.Game.#ctor(System.String,System.String)
+  commentId: M:Chess.Lib.Game.#ctor(System.String,System.String)
+  id: '#ctor(System.String,System.String)'
+  parent: Chess.Lib.Game
+  langs:
+  - csharp
+  - vb
+  name: Game(String, String)
+  nameWithType: Game.Game(String, String)
+  fullName: Chess.Lib.Game.Game(System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: src/Chess.Lib/Game.cs
+      branch: develop
+      repo: https://github.com/DamienFlury/chess.git
+    id: .ctor
+    path: src/Chess.Lib/Game.cs
+    startLine: 29
+  assemblies:
+  - Chess.Lib
+  namespace: Chess.Lib
+  summary: "\nCreates a new game instance. Both player names can&apos;t be null.\nCreates the board array of tiles as a starting game.\n"
+  example: []
+  syntax:
+    content: public Game(string whitePlayerName, string blackPlayerName)
+    parameters:
+    - id: whitePlayerName
+      type: System.String
+      description: No null allowed
+    - id: blackPlayerName
+      type: System.String
+      description: No null allowed
+    content.vb: Public Sub New(whitePlayerName As String, blackPlayerName As String)
+  overload: Chess.Lib.Game.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Chess.Lib.Game.Board
+  commentId: P:Chess.Lib.Game.Board
+  id: Board
+  parent: Chess.Lib.Game
+  langs:
+  - csharp
+  - vb
+  name: Board
+  nameWithType: Game.Board
+  fullName: Chess.Lib.Game.Board
+  type: Property
+  source:
+    remote:
+      path: src/Chess.Lib/Game.cs
+      branch: develop
+      repo: https://github.com/DamienFlury/chess.git
+    id: Board
+    path: src/Chess.Lib/Game.cs
+    startLine: 93
+  assemblies:
+  - Chess.Lib
+  namespace: Chess.Lib
+  summary: "\nThe board. Contains either occupied tiles or Empty tiles. Null should never be used.\n"
+  example: []
+  syntax:
+    content: public ITile[, ] Board { get; }
+    parameters: []
+    return:
+      type: Chess.Lib.Tiles.ITile[,]
+    content.vb: Public ReadOnly Property Board As ITile(,)
+  overload: Chess.Lib.Game.Board*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Chess.Lib.Game.Move(System.Int32,System.Int32,System.Int32,System.Int32)
+  commentId: M:Chess.Lib.Game.Move(System.Int32,System.Int32,System.Int32,System.Int32)
+  id: Move(System.Int32,System.Int32,System.Int32,System.Int32)
+  parent: Chess.Lib.Game
+  langs:
+  - csharp
+  - vb
+  name: Move(Int32, Int32, Int32, Int32)
+  nameWithType: Game.Move(Int32, Int32, Int32, Int32)
+  fullName: Chess.Lib.Game.Move(System.Int32, System.Int32, System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/Chess.Lib/Game.cs
+      branch: develop
+      repo: https://github.com/DamienFlury/chess.git
+    id: Move
+    path: src/Chess.Lib/Game.cs
+    startLine: 104
+  assemblies:
+  - Chess.Lib
+  namespace: Chess.Lib
+  summary: "\nMoves a piece.\n"
+  example: []
+  syntax:
+    content: public Game Move(int xCurrent, int yCurrent, int xDestination, int yDestination)
+    parameters:
+    - id: xCurrent
+      type: System.Int32
+      description: ''
+    - id: yCurrent
+      type: System.Int32
+      description: ''
+    - id: xDestination
+      type: System.Int32
+      description: ''
+    - id: yDestination
+      type: System.Int32
+      description: ''
+    return:
+      type: Chess.Lib.Game
+      description: ''
+    content.vb: Public Function Move(xCurrent As Integer, yCurrent As Integer, xDestination As Integer, yDestination As Integer) As Game
+  overload: Chess.Lib.Game.Move*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Chess.Lib
+  commentId: N:Chess.Lib
+  name: Chess.Lib
+  nameWithType: Chess.Lib
+  fullName: Chess.Lib
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Chess.Lib.Game.#ctor*
+  commentId: Overload:Chess.Lib.Game.#ctor
+  name: Game
+  nameWithType: Game.Game
+  fullName: Chess.Lib.Game.Game
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Chess.Lib.Game.Board*
+  commentId: Overload:Chess.Lib.Game.Board
+  name: Board
+  nameWithType: Game.Board
+  fullName: Chess.Lib.Game.Board
+- uid: Chess.Lib.Tiles.ITile[,]
+  isExternal: true
+  name: ITile[,]
+  nameWithType: ITile[,]
+  fullName: Chess.Lib.Tiles.ITile[,]
+  nameWithType.vb: ITile(,)
+  fullName.vb: Chess.Lib.Tiles.ITile(,)
+  name.vb: ITile(,)
+  spec.csharp:
+  - uid: Chess.Lib.Tiles.ITile
+    name: ITile
+    nameWithType: ITile
+    fullName: Chess.Lib.Tiles.ITile
+  - name: '[,]'
+    nameWithType: '[,]'
+    fullName: '[,]'
+  spec.vb:
+  - uid: Chess.Lib.Tiles.ITile
+    name: ITile
+    nameWithType: ITile
+    fullName: Chess.Lib.Tiles.ITile
+  - name: (,)
+    nameWithType: (,)
+    fullName: (,)
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+- uid: Chess.Lib.Game.Move*
+  commentId: Overload:Chess.Lib.Game.Move
+  name: Move
+  nameWithType: Game.Move
+  fullName: Chess.Lib.Game.Move
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Chess.Lib.Game
+  commentId: T:Chess.Lib.Game
+  parent: Chess.Lib
+  name: Game
+  nameWithType: Game
+  fullName: Chess.Lib.Game

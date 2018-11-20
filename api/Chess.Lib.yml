@@ -1,0 +1,35 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chess.Lib
+  commentId: N:Chess.Lib
+  id: Chess.Lib
+  children:
+  - Chess.Lib.Game
+  - Chess.Lib.Team
+  langs:
+  - csharp
+  - vb
+  name: Chess.Lib
+  nameWithType: Chess.Lib
+  fullName: Chess.Lib
+  type: Namespace
+  assemblies:
+  - Chess.Lib
+references:
+- uid: Chess.Lib.Game
+  commentId: T:Chess.Lib.Game
+  parent: Chess.Lib
+  name: Game
+  nameWithType: Game
+  fullName: Chess.Lib.Game
+- uid: Chess.Lib.Team
+  commentId: T:Chess.Lib.Team
+  parent: Chess.Lib
+  name: Team
+  nameWithType: Team
+  fullName: Chess.Lib.Team
+- uid: Chess.Lib
+  commentId: N:Chess.Lib
+  name: Chess.Lib
+  nameWithType: Chess.Lib
+  fullName: Chess.Lib

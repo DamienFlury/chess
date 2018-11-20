@@ -11,12 +11,8 @@ namespace Chess.Lib
         /// Creates a new instance of Player. Name can't be null.
         /// </summary>
         /// <param name="name">No null allowed</param>
-        /// <param name="color"></param>
-        public Player(string name, Team team)
-        {
-            Name = name ?? throw new ArgumentNullException(nameof(name));
-            Team = team;
-        }
+        /// <param name="team"></param>
+        public Player(string name, Team team) => (Name, Team) = (name, team);
 
         /// <summary>
         /// The name of the player.
@@ -26,6 +22,6 @@ namespace Chess.Lib
         /// <summary>
         /// The color/team of the player.
         /// </summary>
-        internal Team Team { get; }
+        private Team Team { get; }
     }
 }

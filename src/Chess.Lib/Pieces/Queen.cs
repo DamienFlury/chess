@@ -1,36 +1,20 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 
 namespace Chess.Lib.Pieces
 {
     public sealed class Queen : IPiece
     {
-        public Queen(Team team)
-        {
-            Team = team;
-        }
+        public Queen(Team team) => Team = team;
 
         public override string ToString() => "Queen";
 
         public Team Team { get; }
 
-        public IEnumerable<Move> PossibleMoves
-        {
-            get
-            {
-                for (var i = 1; i < 8; i++)
-                {
-                    yield return new Move(0, -i);
-                    yield return new Move(i, -i);
-                    yield return new Move(i, 0);
-                    yield return new Move(i, i);
-                    yield return new Move(0, i);
-                    yield return new Move(-i, i);
-                    yield return new Move(-i, 0);
-                    yield return new Move(-i, -i);
-                }
-            }
-        }
+        public IEnumerable<Move> GetPossibleMoves(Point current, Board board) => PossibleMovesHelper
+            .GetDiagonalMoves(current, board).Concat(PossibleMovesHelper.GetStraightMoves(current, board));
+
     }
 }

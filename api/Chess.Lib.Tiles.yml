@@ -1,0 +1,40 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chess.Lib.Tiles
+  commentId: N:Chess.Lib.Tiles
+  id: Chess.Lib.Tiles
+  children:
+  - Chess.Lib.Tiles.EmptyTile
+  - Chess.Lib.Tiles.ITile
+  - Chess.Lib.Tiles.OccupiedTile
+  langs:
+  - csharp
+  - vb
+  name: Chess.Lib.Tiles
+  nameWithType: Chess.Lib.Tiles
+  fullName: Chess.Lib.Tiles
+  type: Namespace
+  assemblies:
+  - Chess.Lib
+references:
+- uid: Chess.Lib.Tiles.EmptyTile
+  commentId: T:Chess.Lib.Tiles.EmptyTile
+  name: EmptyTile
+  nameWithType: EmptyTile
+  fullName: Chess.Lib.Tiles.EmptyTile
+- uid: Chess.Lib.Tiles.ITile
+  commentId: T:Chess.Lib.Tiles.ITile
+  parent: Chess.Lib.Tiles
+  name: ITile
+  nameWithType: ITile
+  fullName: Chess.Lib.Tiles.ITile
+- uid: Chess.Lib.Tiles.OccupiedTile
+  commentId: T:Chess.Lib.Tiles.OccupiedTile
+  name: OccupiedTile
+  nameWithType: OccupiedTile
+  fullName: Chess.Lib.Tiles.OccupiedTile
+- uid: Chess.Lib.Tiles
+  commentId: N:Chess.Lib.Tiles
+  name: Chess.Lib.Tiles
+  nameWithType: Chess.Lib.Tiles
+  fullName: Chess.Lib.Tiles

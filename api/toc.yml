@@ -1,0 +1,34 @@
+### YamlMime:TableOfContent
+- uid: Chess.Lib
+  name: Chess.Lib
+  items:
+  - uid: Chess.Lib.Game
+    name: Game
+  - uid: Chess.Lib.Team
+    name: Team
+- uid: Chess.Lib.Pieces
+  name: Chess.Lib.Pieces
+  items:
+  - uid: Chess.Lib.Pieces.Bishop
+    name: Bishop
+  - uid: Chess.Lib.Pieces.King
+    name: King
+  - uid: Chess.Lib.Pieces.Knight
+    name: Knight
+  - uid: Chess.Lib.Pieces.Pawn
+    name: Pawn
+  - uid: Chess.Lib.Pieces.Piece
+    name: Piece
+  - uid: Chess.Lib.Pieces.Queen
+    name: Queen
+  - uid: Chess.Lib.Pieces.Rook
+    name: Rook
+- uid: Chess.Lib.Tiles
+  name: Chess.Lib.Tiles
+  items:
+  - uid: Chess.Lib.Tiles.EmptyTile
+    name: EmptyTile
+  - uid: Chess.Lib.Tiles.ITile
+    name: ITile
+  - uid: Chess.Lib.Tiles.OccupiedTile
+    name: OccupiedTile

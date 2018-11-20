@@ -1,0 +1,42 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chess.Lib.Tiles.ITile
+  commentId: T:Chess.Lib.Tiles.ITile
+  id: ITile
+  parent: Chess.Lib.Tiles
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: ITile
+  nameWithType: ITile
+  fullName: Chess.Lib.Tiles.ITile
+  type: Interface
+  source:
+    remote:
+      path: src/Chess.Lib/Tiles/ITile.cs
+      branch: develop
+      repo: https://github.com/DamienFlury/chess.git
+    id: ITile
+    path: src/Chess.Lib/Tiles/ITile.cs
+    startLine: 5
+  assemblies:
+  - Chess.Lib
+  namespace: Chess.Lib.Tiles
+  summary: "\nThe interface of tiles.\n"
+  example: []
+  syntax:
+    content: public interface ITile
+    content.vb: Public Interface ITile
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+references:
+- uid: Chess.Lib.Tiles
+  commentId: N:Chess.Lib.Tiles
+  name: Chess.Lib.Tiles
+  nameWithType: Chess.Lib.Tiles
+  fullName: Chess.Lib.Tiles

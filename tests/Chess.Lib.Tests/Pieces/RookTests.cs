@@ -1,5 +1,9 @@
+using System;
 using System.Linq;
+using System.Threading;
 using Chess.Lib.Pieces;
+using Chess.Lib.Tiles;
+using Newtonsoft.Json.Serialization;
 using Xunit;
 
 namespace Chess.Lib.Tests.Pieces
@@ -7,23 +11,25 @@ namespace Chess.Lib.Tests.Pieces
     public class RookTests
     {
         [Fact]
-        public void PossibleMoves_Test()
+        public void GetPossibleMoves_Test()
         {
-            var rook = new Rook(Team.White);
-            Assert.Contains(new Move(1, 0), rook.PossibleMoves);
-            Assert.Contains(new Move(2, 0), rook.PossibleMoves);
-            Assert.Contains(new Move(-5, 0), rook.PossibleMoves);
-            Assert.Contains(new Move(0, 3), rook.PossibleMoves);
-            Assert.Contains(new Move(0, 7), rook.PossibleMoves);
-            
-            
-            Assert.DoesNotContain(new Move(1, 1), rook.PossibleMoves);
-            Assert.DoesNotContain(new Move(0, 0), rook.PossibleMoves);
-            Assert.DoesNotContain(new Move(-5, 5), rook.PossibleMoves);
-            Assert.DoesNotContain(new Move(-5, 1), rook.PossibleMoves);
-            Assert.DoesNotContain(new Move(4, 5), rook.PossibleMoves);
+            var game = new Game();
+            var rook = (game.Board[0, 0] as OccupiedTile)?.Piece;
+            Assert.NotNull(rook);
+            Assert.False(rook.GetPossibleMoves(new Point(0, 0), game.Board).Any());
+        }
 
+        [Fact]
+        public void GetPossibleMoves_Test2()
+        {
+            var game = new Game();
+            game = game.Move(new Point(0, 1), new Point(0, 2));
+            var rook = (game.Board[0, 0] as OccupiedTile)?.Piece;
+            Assert.NotNull(rook);
+            var possibleMoves = rook.GetPossibleMoves(new Point(0, 0), game.Board).ToArray();
 
+            Assert.Contains(new Move(0, 1), possibleMoves);
+            Assert.True(possibleMoves.Count() == 1);
         }
     }
 }
