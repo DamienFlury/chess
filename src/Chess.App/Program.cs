@@ -60,7 +60,11 @@ namespace Chess.App
                             if (!(game.Board[x, y] is OccupiedTile occupiedTile)) continue;
                             var piece = occupiedTile.Piece;
                             if (!(piece is King king)) continue;
-//                            Console.WriteLine(king.Team + ": " + king.IsChecked(new Point(x, y), game.Board));
+                            var isChecked = king.IsChecked(game.Board);
+                            Console.Write(king.Team + ": ");
+                            if (isChecked) Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine(isChecked);
+                            if (isChecked) Console.ResetColor();
                         }
                     }
                 }

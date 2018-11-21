@@ -118,7 +118,7 @@ namespace Chess.Lib
             }
 
             nextTiles[xCurrent, yCurrent] = new EmptyTile();
-            nextTiles[xDestination, yDestination] = new OccupiedTile(piece.With(hasBeenMoved: true));
+            nextTiles[xDestination, yDestination] = new OccupiedTile(piece.With(x: xDestination, y: yDestination, hasBeenMoved: true));
 
             return new Game(Player1.Name, Player2.Name, new Board(nextTiles));
         }
