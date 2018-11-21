@@ -23,7 +23,7 @@ namespace Chess.Lib.Tests.Pieces
         public void GetPossibleMoves_Test2()
         {
             var game = new Game();
-            game = game.Move(new Point(0, 1), new Point(0, 2));
+            game = game.Move(0, 1, 0, 2);
             var rook = (game.Board[0, 0] as OccupiedTile)?.Piece;
             Assert.NotNull(rook);
             var possibleMoves = rook.GetPossibleMoves(game.Board).ToArray();

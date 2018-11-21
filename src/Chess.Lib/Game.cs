@@ -82,23 +82,26 @@ namespace Chess.Lib
         /// <summary>
         /// Moves a piece.
         /// </summary>
-        /// <param name="current"></param>
-        /// <param name="destination"></param>
+        /// <param name="xCurrent"></param>
+        /// <param name="yCurrent"></param>
+        /// <param name="xDestination"></param>
+        /// <param name="yDestination"></param>
         /// <returns></returns>
         /// <exception cref="ArgumentException"></exception>
-        public Game Move(Point current, Point destination)
+        /// <exception cref="IllegalMoveException"></exception>
+        public Game Move(int xCurrent, int yCurrent, int xDestination, int yDestination)
         {
-            var currentTile = Board[current.X, current.Y];
+            var currentTile = Board[xCurrent, yCurrent];
 
             if (!(currentTile is OccupiedTile currentTileOccupied))
                 throw new ArgumentException("Current tile can't be empty");
 
             var piece = currentTileOccupied.Piece;
 
-            var move = destination - current;
+            var move = new Move(xDestination - xCurrent, yDestination - yCurrent);
 
 
-            var destinationTile = Board[destination.X, destination.Y];
+            var destinationTile = Board[xDestination, yDestination];
 
             if (destinationTile is OccupiedTile occupiedTile && occupiedTile.Piece.Team == piece.Team)
                 throw new IllegalMoveException("Cannot capture your own piece");
@@ -114,8 +117,8 @@ namespace Chess.Lib
                 }
             }
 
-            nextTiles[current.X, current.Y] = new EmptyTile();
-            nextTiles[destination.X, destination.Y] = new OccupiedTile(piece.With(hasBeenMoved: true));
+            nextTiles[xCurrent, yCurrent] = new EmptyTile();
+            nextTiles[xDestination, yDestination] = new OccupiedTile(piece.With(hasBeenMoved: true));
 
             return new Game(Player1.Name, Player2.Name, new Board(nextTiles));
         }

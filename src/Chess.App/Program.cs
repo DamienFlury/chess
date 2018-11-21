@@ -40,16 +40,14 @@ namespace Chess.App
                     if (!int.TryParse(Console.ReadLine(), out var yDestination)) continue;
 
 
-                    var current = new Point(xCurrent, yCurrent);
-                    var destination = new Point(xDestination, yDestination);
                     try
                     {
-                        game = game.Move(current, destination);
+                        game = game.Move(xCurrent, yCurrent, xDestination, yDestination);
                     }
                     catch
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("  No move possible");
+                        Console.WriteLine("  Move not possible");
                         Console.ResetColor();
                     }
                 }
@@ -90,10 +88,9 @@ namespace Chess.App
                 var y = int.Parse(Console.ReadLine());
                 var piece = (game.Board[x, y] as OccupiedTile)?.Piece;
                 if (piece is null) continue;
-                var currentPoint = new Point(x, y);
                 foreach (var move in piece.GetPossibleMoves(game.Board))
                 {
-                    DrawBoardToConsoleSimplified(game.Move(currentPoint, currentPoint + move));
+                    DrawBoardToConsoleSimplified(game.Move(x, y, x + move.X, y + move.Y));
                 }
             }
         }
@@ -121,7 +118,7 @@ namespace Chess.App
                 var yDestination = int.Parse(Console.ReadLine());
                 try
                 {
-                    game = game.Move(new Point(xCurrent, yCurrent), new Point(xDestination, yDestination));
+                    game = game.Move(xCurrent, yCurrent, xDestination, yDestination);
                     DrawBoardToConsoleSimplified(game);
                 }
                 catch

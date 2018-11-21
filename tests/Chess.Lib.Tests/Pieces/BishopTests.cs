@@ -13,17 +13,17 @@ namespace Chess.Lib.Tests.Pieces
             
             Assert.Empty(bishop.GetPossibleMoves(game.Board));
 
-            game = game.Move(new Point(3, 1), new Point(3, 3));
+            game = game.Move(3, 1, 3, 3);
             Assert.NotEmpty(bishop.GetPossibleMoves(game.Board));
 
-            var ex = Record.Exception(() => game.Move(new Point(2, 0), new Point(4, 2)));
+            var ex = Record.Exception(() => game.Move(2, 0, 4, 2));
             Assert.Null(ex);
 
-            Assert.Throws<IllegalMoveException>(() => game.Move(new Point(2, 0), new Point(3, 2)));
-            Assert.Throws<IllegalMoveException>(() => game.Move(new Point(2, 0), new Point(1, 1)));
+            Assert.Throws<IllegalMoveException>(() => game.Move(2, 0, 3, 2));
+            Assert.Throws<IllegalMoveException>(() => game.Move(2, 0, 1, 1));
 
-            var newGame = game.Move(new Point(1, 1), new Point(1, 2));
-            var ex2 = Record.Exception(() => newGame.Move(new Point(2, 0), new Point(1, 1)));
+            var newGame = game.Move(1, 1, 1, 2);
+            var ex2 = Record.Exception(() => newGame.Move(2, 0, 1, 1));
             Assert.Null(ex2);
         }
     }

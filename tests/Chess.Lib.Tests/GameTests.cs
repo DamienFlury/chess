@@ -47,22 +47,22 @@ namespace Chess.Lib.Tests
         {
             var game = new Game("First", "Second");
 
-            Assert.Throws<IllegalMoveException>(() => game.Move(new Point(0, 0), new Point(0, 3)));
+            Assert.Throws<IllegalMoveException>(() => game.Move(0, 0, 0, 3));
         }
 
         [Fact]
         public void IllegalMoveException_Test()
         {
             var game = new Game("", "");
-            Assert.Throws<IllegalMoveException>(() => game.Move(new Point(0, 0), new Point(1, 1)));
-            Assert.Throws<IllegalMoveException>(() => game.Move(new Point(1, 0), new Point(0, 3)));
+            Assert.Throws<IllegalMoveException>(() => game.Move(0,0,1,1));
+            Assert.Throws<IllegalMoveException>(() => game.Move(1, 0, 0, 3));
 
             Assert.True(game.Board[2, 3] is EmptyTile);
 
-            var ex = Record.Exception(() => game.Move(new Point(2, 1), new Point(2, 3)));
+            var ex = Record.Exception(() => game.Move(2, 1, 2, 3));
             Assert.Null(ex);
 
-            Assert.Throws<IllegalMoveException>(() => game.Move(new Point(2, 0), new Point(4, 2)));
+            Assert.Throws<IllegalMoveException>(() => game.Move(2, 0, 4, 2));
         }
 
         [Fact]
@@ -70,10 +70,10 @@ namespace Chess.Lib.Tests
         {
             var game = new Game("", "");
             var tile = game.Board[4, 0];
-            
+
             Assert.True(tile is OccupiedTile occupiedTile && occupiedTile.Piece is King);
 
-            var ex = Record.Exception(() => game.Move(new Point(4, 0), new Point(5, 0)));
+            var ex = Record.Exception(() => game.Move(4, 0, 5, 0));
 
             Assert.IsType<IllegalMoveException>(ex);
             Assert.True(ex.Message == "Cannot capture your own piece");

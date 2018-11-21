@@ -13,7 +13,7 @@ namespace Chess.Lib.Tests.Pieces
             var queen = new Queen(Team.Black, 3, 0);
             Assert.Empty(queen.GetPossibleMoves(game.Board));
 
-            var movedPawnGame = game.Move(new Point(3, 1), new Point(3, 3));
+            var movedPawnGame = game.Move(3, 1, 3, 3);
             
             Assert.True(queen.GetPossibleMoves(movedPawnGame.Board).Count() == 2);
         }
