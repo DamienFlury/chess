@@ -21,24 +21,24 @@ namespace Chess.Lib
         private static Board GetStartingTiles()
         {
             var tiles = new ITile[8, 8];
-            tiles[0, 0] = new OccupiedTile(new Rook(Team.Black));
-            tiles[1, 0] = new OccupiedTile(new Knight(Team.Black));
-            tiles[2, 0] = new OccupiedTile(new Bishop(Team.Black));
-            tiles[3, 0] = new OccupiedTile(new Queen(Team.Black));
-            tiles[4, 0] = new OccupiedTile(new King(Team.Black));
-            tiles[5, 0] = new OccupiedTile(new Bishop(Team.Black));
-            tiles[6, 0] = new OccupiedTile(new Knight(Team.Black));
-            tiles[7, 0] = new OccupiedTile(new Rook(Team.Black));
+            tiles[0, 0] = new OccupiedTile(new Rook(Team.Black, 0, 0));
+            tiles[1, 0] = new OccupiedTile(new Knight(Team.Black, 1, 0));
+            tiles[2, 0] = new OccupiedTile(new Bishop(Team.Black, 2, 0));
+            tiles[3, 0] = new OccupiedTile(new Queen(Team.Black, 3, 0));
+            tiles[4, 0] = new OccupiedTile(new King(Team.Black, 4, 0));
+            tiles[5, 0] = new OccupiedTile(new Bishop(Team.Black, 5, 0));
+            tiles[6, 0] = new OccupiedTile(new Knight(Team.Black, 6, 0));
+            tiles[7, 0] = new OccupiedTile(new Rook(Team.Black, 7, 0));
 
             //Pawns
-            tiles[0, 1] = new OccupiedTile(new Pawn(Team.Black));
-            tiles[1, 1] = new OccupiedTile(new Pawn(Team.Black));
-            tiles[2, 1] = new OccupiedTile(new Pawn(Team.Black));
-            tiles[3, 1] = new OccupiedTile(new Pawn(Team.Black));
-            tiles[4, 1] = new OccupiedTile(new Pawn(Team.Black));
-            tiles[5, 1] = new OccupiedTile(new Pawn(Team.Black));
-            tiles[6, 1] = new OccupiedTile(new Pawn(Team.Black));
-            tiles[7, 1] = new OccupiedTile(new Pawn(Team.Black));
+            tiles[0, 1] = new OccupiedTile(new Pawn(Team.Black, 0, 1));
+            tiles[1, 1] = new OccupiedTile(new Pawn(Team.Black, 1, 1));
+            tiles[2, 1] = new OccupiedTile(new Pawn(Team.Black, 2, 1));
+            tiles[3, 1] = new OccupiedTile(new Pawn(Team.Black, 3, 1));
+            tiles[4, 1] = new OccupiedTile(new Pawn(Team.Black, 4, 1));
+            tiles[5, 1] = new OccupiedTile(new Pawn(Team.Black, 5, 1));
+            tiles[6, 1] = new OccupiedTile(new Pawn(Team.Black, 6, 1));
+            tiles[7, 1] = new OccupiedTile(new Pawn(Team.Black, 7, 1));
 
             for (var x = 0; x < 8; x++)
             {
@@ -49,23 +49,23 @@ namespace Chess.Lib
             }
 
 
-            tiles[0, 7] = new OccupiedTile(new Rook(Team.White));
-            tiles[1, 7] = new OccupiedTile(new Knight(Team.White));
-            tiles[2, 7] = new OccupiedTile(new Bishop(Team.White));
-            tiles[3, 7] = new OccupiedTile(new Queen(Team.White));
-            tiles[4, 7] = new OccupiedTile(new King(Team.White));
-            tiles[5, 7] = new OccupiedTile(new Bishop(Team.White));
-            tiles[6, 7] = new OccupiedTile(new Knight(Team.White));
-            tiles[7, 7] = new OccupiedTile(new Rook(Team.White));
+            tiles[0, 7] = new OccupiedTile(new Rook(Team.White, 0, 7));
+            tiles[1, 7] = new OccupiedTile(new Knight(Team.White, 1, 7));
+            tiles[2, 7] = new OccupiedTile(new Bishop(Team.White, 2, 7));
+            tiles[3, 7] = new OccupiedTile(new Queen(Team.White, 3, 7));
+            tiles[4, 7] = new OccupiedTile(new King(Team.White, 4, 7));
+            tiles[5, 7] = new OccupiedTile(new Bishop(Team.White, 5, 7));
+            tiles[6, 7] = new OccupiedTile(new Knight(Team.White, 6, 7));
+            tiles[7, 7] = new OccupiedTile(new Rook(Team.White, 7, 7));
 
-            tiles[0, 6] = new OccupiedTile(new Pawn(Team.White));
-            tiles[1, 6] = new OccupiedTile(new Pawn(Team.White));
-            tiles[2, 6] = new OccupiedTile(new Pawn(Team.White));
-            tiles[3, 6] = new OccupiedTile(new Pawn(Team.White));
-            tiles[4, 6] = new OccupiedTile(new Pawn(Team.White));
-            tiles[5, 6] = new OccupiedTile(new Pawn(Team.White));
-            tiles[6, 6] = new OccupiedTile(new Pawn(Team.White));
-            tiles[7, 6] = new OccupiedTile(new Pawn(Team.White));
+            tiles[0, 6] = new OccupiedTile(new Pawn(Team.White, 0, 6));
+            tiles[1, 6] = new OccupiedTile(new Pawn(Team.White, 1, 6));
+            tiles[2, 6] = new OccupiedTile(new Pawn(Team.White, 2, 6));
+            tiles[3, 6] = new OccupiedTile(new Pawn(Team.White, 3, 6));
+            tiles[4, 6] = new OccupiedTile(new Pawn(Team.White, 4, 6));
+            tiles[5, 6] = new OccupiedTile(new Pawn(Team.White, 5, 6));
+            tiles[6, 6] = new OccupiedTile(new Pawn(Team.White, 6, 6));
+            tiles[7, 6] = new OccupiedTile(new Pawn(Team.White, 7, 7));
 
             return new Board(tiles);
         }
@@ -103,7 +103,7 @@ namespace Chess.Lib
             if (destinationTile is OccupiedTile occupiedTile && occupiedTile.Piece.Team == piece.Team)
                 throw new IllegalMoveException("Cannot capture your own piece");
 
-            if (!piece.GetPossibleMoves(current, Board).Contains(move)) throw new IllegalMoveException("");
+            if (!piece.GetPossibleMoves(Board).Contains(move)) throw new IllegalMoveException("");
 
             var nextTiles = new ITile[8, 8];
             for (var y = 0; y < 8; y++)

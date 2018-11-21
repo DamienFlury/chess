@@ -6,80 +6,80 @@ namespace Chess.Lib.Pieces
 {
     public static class PossibleMovesHelper
     {
-        public static IEnumerable<Move> GetStraightMoves(Point current, Board board)
+        public static IEnumerable<Move> GetStraightMoves(int xCurrent, int yCurrent, Board board)
         {
-            if (!(board[current.X, current.Y] is OccupiedTile occupiedTile)) throw new ArgumentException();
+            if (!(board[xCurrent, yCurrent] is OccupiedTile occupiedTile)) throw new ArgumentException();
 
             var team = occupiedTile.Piece.Team;
-            for (var x = current.X + 1; x < 8; x++)
+            for (var x = xCurrent + 1; x < 8; x++)
             {
-                var tile = board[x, current.Y];
+                var tile = board[x, yCurrent];
                 if (IsOccupiedBySameTeam(team, tile)) break;
-                yield return new Move(x - current.X, 0);
+                yield return new Move(x - xCurrent, 0);
             }
 
-            for (var x = current.X - 1; x >= 0; x--)
+            for (var x = xCurrent - 1; x >= 0; x--)
             {
-                var tile = board[x, current.Y];
+                var tile = board[x, yCurrent];
                 if (IsOccupiedBySameTeam(team, tile)) break;
-                yield return new Move(x - current.X, 0);
+                yield return new Move(x - xCurrent, 0);
             }
 
-            for (var y = current.Y + 1; y < 8; y++)
+            for (var y = yCurrent + 1; y < 8; y++)
             {
-                var tile = board[current.X, y];
+                var tile = board[xCurrent, y];
                 if (IsOccupiedBySameTeam(team, tile)) break;
-                yield return new Move(0, y - current.Y);
+                yield return new Move(0, y - yCurrent);
             }
 
-            for (var y = current.Y - 1; y >= 0; y++)
+            for (var y = yCurrent - 1; y >= 0; y++)
             {
-                var tile = board[current.X, y];
+                var tile = board[xCurrent, y];
                 if (IsOccupiedBySameTeam(team, tile)) break;
-                yield return new Move(0, y - current.Y);
+                yield return new Move(0, y - yCurrent);
             }
         }
 
-        public static IEnumerable<Move> GetDiagonalMoves(Point current, Board board)
+        public static IEnumerable<Move> GetDiagonalMoves(int xCurrent, int yCurrent, Board board)
         {
-            if (!(board[current.X, current.Y] is OccupiedTile occupiedTile)) throw new ArgumentException();
+            if (!(board[xCurrent, yCurrent] is OccupiedTile occupiedTile)) throw new ArgumentException();
 
             var team = occupiedTile.Piece.Team;
 
-            for (var i = 1; current.X + i < 8 && current.Y + i < 8; i++)
+            for (var i = 1; xCurrent + i < 8 && yCurrent + i < 8; i++)
             {
-                var x = current.X + i;
-                var y = current.Y + i;
+                var x = xCurrent + i;
+                var y = yCurrent + i;
                 var tile = board[x, y];
                 if (IsOccupiedBySameTeam(team, tile)) break;
-                yield return new Move(x - current.X, y - current.Y);
+                yield return new Move(x - xCurrent, y - yCurrent);
             }
 
-            for (var i = 1; current.X + i < 8 && current.Y - i > 0; i++)
+            for (var i = 1; xCurrent + i < 8 && yCurrent - i > 0; i++)
             {
-                var x = current.X + i;
-                var y = current.Y - i;
+                var x = xCurrent + i;
+                var y = yCurrent - i;
                 var tile = board[x, y];
                 if (IsOccupiedBySameTeam(team, tile)) break;
-                yield return new Move(x - current.X, y - current.Y);
+                yield return new Move(x - xCurrent, y - yCurrent);
             }
 
-            for (var i = 1; current.X - i > 0 && current.Y + i < 8; i++)
+            for (var i = 1; xCurrent - i > 0 && yCurrent + i < 8; i++)
             {
-                var x = current.X - i;
-                var y = current.Y + i;
+                var x = xCurrent - i;
+                var y = yCurrent + i;
                 var tile = board[x, y];
                 if (IsOccupiedBySameTeam(team, tile)) break;
-                yield return new Move(x - current.X, y - current.Y);
+                yield return new Move(x - xCurrent, y - yCurrent);
             }
 
-            for (var i = 1; current.X - i > 0 && current.Y - i > 0; i++)
+            for (var i = 1; xCurrent - i > 0 && yCurrent - i > 0; i++)
             {
-                var x = current.X - i;
-                var y = current.Y - i;
+                var x = xCurrent - i;
+                var y = yCurrent - i;
                 var tile = board[x, y];
                 if (IsOccupiedBySameTeam(team, tile)) break;
-                yield return new Move(x - current.X, y - current.Y);
+                yield return new Move(x - xCurrent, y - yCurrent);
             }
         }
 

@@ -62,7 +62,7 @@ namespace Chess.App
                             if (!(game.Board[x, y] is OccupiedTile occupiedTile)) continue;
                             var piece = occupiedTile.Piece;
                             if (!(piece is King king)) continue;
-                            Console.WriteLine(king.Team + ": " + king.IsChecked(new Point(x, y), game.Board));
+//                            Console.WriteLine(king.Team + ": " + king.IsChecked(new Point(x, y), game.Board));
                         }
                     }
                 }
@@ -91,7 +91,7 @@ namespace Chess.App
                 var piece = (game.Board[x, y] as OccupiedTile)?.Piece;
                 if (piece is null) continue;
                 var currentPoint = new Point(x, y);
-                foreach (var move in piece.GetPossibleMoves(currentPoint, game.Board))
+                foreach (var move in piece.GetPossibleMoves(game.Board))
                 {
                     DrawBoardToConsoleSimplified(game.Move(currentPoint, currentPoint + move));
                 }
@@ -103,7 +103,7 @@ namespace Chess.App
             var game = new Game("Test", "Test2");
             DrawBoardToConsoleSimplified(game);
             var piece = (game.Board[1, 0] as OccupiedTile)?.Piece ?? throw new Exception();
-            foreach (var move in piece.GetPossibleMoves(new Point(1, 0), game.Board))
+            foreach (var move in piece.GetPossibleMoves(game.Board))
             {
                 Console.WriteLine($"x = {move.X}, y = {move.Y}");
             }

@@ -10,8 +10,10 @@ namespace Chess.Lib.Pieces
     public interface IPiece
     {
         Team Team { get; }
+        int X { get; }
+        int Y { get; }
         bool HasBeenMoved { get; }
-        IPiece With(Team? team = null, bool? hasBeenMoved = null);
-        IEnumerable<Move> GetPossibleMoves(Point current, Board board);
+        IPiece With(Team? team = null, int? x = null, int? y = null, bool? hasBeenMoved = null);
+        IEnumerable<Move> GetPossibleMoves(Board board);
     }
 }
