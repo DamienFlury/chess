@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Net;
-using System.Security.Cryptography.X509Certificates;
+using System.IO.Enumeration;
 using Chess.Lib;
 using Chess.Lib.Pieces;
 using Chess.Lib.Tiles;
@@ -25,7 +21,7 @@ namespace Chess.App
                 DrawBoardToConsoleSimplified(game);
                 WriteInputCharacter();
                 var input = (Console.ReadLine() ?? "").ToLower();
-                if (input == "m" || input == "move")
+                if (input == "mv" || input == "move")
                 {
                     Console.ForegroundColor = ConsoleColor.Magenta;
                     Console.WriteLine("  Move from:");
@@ -55,6 +51,19 @@ namespace Chess.App
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("  No move possible");
                         Console.ResetColor();
+                    }
+                }
+                else if (input == "status")
+                {
+                    for (var x = 0; x < 8; x++)
+                    {
+                        for (var y = 0; y < 8; y++)
+                        {
+                            if (!(game.Board[x, y] is OccupiedTile occupiedTile)) continue;
+                            var piece = occupiedTile.Piece;
+                            if (!(piece is King king)) continue;
+                            Console.WriteLine(king.Team + ": " + king.IsChecked(new Point(x, y), game.Board));
+                        }
                     }
                 }
 

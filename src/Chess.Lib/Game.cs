@@ -52,8 +52,8 @@ namespace Chess.Lib
             tiles[0, 7] = new OccupiedTile(new Rook(Team.White));
             tiles[1, 7] = new OccupiedTile(new Knight(Team.White));
             tiles[2, 7] = new OccupiedTile(new Bishop(Team.White));
-            tiles[3, 7] = new OccupiedTile(new King(Team.White));
-            tiles[4, 7] = new OccupiedTile(new Queen(Team.White));
+            tiles[3, 7] = new OccupiedTile(new Queen(Team.White));
+            tiles[4, 7] = new OccupiedTile(new King(Team.White));
             tiles[5, 7] = new OccupiedTile(new Bishop(Team.White));
             tiles[6, 7] = new OccupiedTile(new Knight(Team.White));
             tiles[7, 7] = new OccupiedTile(new Rook(Team.White));
