@@ -16,8 +16,16 @@ namespace Chess.Lib.Pieces
 
         public IEnumerable<Move> GetPossibleMoves(Point current, Board board)
         {
-            yield return new Move(0, 1);
-            yield return new Move(0, 2);
+            if (Team == Team.Black)
+            {
+                yield return new Move(0, 1);
+                yield return new Move(0, 2);
+            }
+            else
+            {
+                yield return new Move(0, -1);
+                yield return new Move(0, -2);
+            }
         }
 
     }

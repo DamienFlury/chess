@@ -29,7 +29,7 @@ namespace Chess.Lib.Pieces
                     if (realX < 0 || realX > 7 || realY < 0 || realY > 7) continue;
                     var tile = board[realX, realY];
                     if (PossibleMovesHelper.IsOccupiedBySameTeam(Team, tile)) break;
-                    yield return new Move(realX, realY);
+                    yield return new Move(realX - current.X, realY - current.Y);
                 }
             }
         }

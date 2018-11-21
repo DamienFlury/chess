@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Net;
 using System.Security.Cryptography.X509Certificates;
 using Chess.Lib;
 using Chess.Lib.Pieces;
@@ -12,8 +14,90 @@ namespace Chess.App
     {
         private static void Main(string[] args)
         {
+            ChoosingDialog();
+        }
+
+        private static void ChoosingDialog()
+        {
+            var game = new Game();
+            for (;;)
+            {
+                DrawBoardToConsoleSimplified(game);
+                WriteInputCharacter();
+                var input = (Console.ReadLine() ?? "").ToLower();
+                if (input == "m" || input == "move")
+                {
+                    Console.ForegroundColor = ConsoleColor.Magenta;
+                    Console.WriteLine("  Move from:");
+                    Console.ResetColor();
+                    Console.Write("    x: ");
+                    if (!int.TryParse(Console.ReadLine(), out var xCurrent)) continue;
+                    Console.Write("    y: ");
+                    if (!int.TryParse(Console.ReadLine(), out var yCurrent)) continue;
+
+                    Console.ForegroundColor = ConsoleColor.Magenta;
+                    Console.WriteLine("  Move to:");
+                    Console.ResetColor();
+                    Console.Write("    x: ");
+                    if (!int.TryParse(Console.ReadLine(), out var xDestination)) continue;
+                    Console.Write("    y: ");
+                    if (!int.TryParse(Console.ReadLine(), out var yDestination)) continue;
+
+
+                    var current = new Point(xCurrent, yCurrent);
+                    var destination = new Point(xDestination, yDestination);
+                    try
+                    {
+                        game = game.Move(current, destination);
+                    }
+                    catch
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("  No move possible");
+                        Console.ResetColor();
+                    }
+                }
+
+                Console.WriteLine();
+            }
+        }
+
+        private static void WriteInputCharacter()
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write("» ");
+            Console.ResetColor();
+        }
+
+        private static void PrintPossibleMoves()
+        {
+            var game = new Game();
+            DrawBoardToConsoleSimplified(game);
+            for (;;)
+            {
+                Console.Write("x: ");
+                var x = int.Parse(Console.ReadLine());
+                Console.Write("y: ");
+                var y = int.Parse(Console.ReadLine());
+                var piece = (game.Board[x, y] as OccupiedTile)?.Piece;
+                if (piece is null) continue;
+                var currentPoint = new Point(x, y);
+                foreach (var move in piece.GetPossibleMoves(currentPoint, game.Board))
+                {
+                    DrawBoardToConsoleSimplified(game.Move(currentPoint, currentPoint + move));
+                }
+            }
+        }
+
+        private static void Movement()
+        {
             var game = new Game("Test", "Test2");
             DrawBoardToConsoleSimplified(game);
+            var piece = (game.Board[1, 0] as OccupiedTile)?.Piece ?? throw new Exception();
+            foreach (var move in piece.GetPossibleMoves(new Point(1, 0), game.Board))
+            {
+                Console.WriteLine($"x = {move.X}, y = {move.Y}");
+            }
 
             while (true)
             {
@@ -26,11 +110,15 @@ namespace Chess.App
                 var xDestination = int.Parse(Console.ReadLine());
                 Console.Write("y (destination) = ");
                 var yDestination = int.Parse(Console.ReadLine());
-
-                game = game.Move(new Point(xCurrent, yCurrent), new Point(xDestination, yDestination));
-                DrawBoardToConsoleSimplified(game);
+                try
+                {
+                    game = game.Move(new Point(xCurrent, yCurrent), new Point(xDestination, yDestination));
+                    DrawBoardToConsoleSimplified(game);
+                }
+                catch
+                {
+                }
             }
-
         }
 
         private static void DrawBoardToConsole()
