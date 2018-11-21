@@ -53,6 +53,7 @@ namespace Chess.Lib.Pieces
                 var tile = board[x, y];
                 if (IsOccupiedBySameTeam(team, tile)) break;
                 yield return new Move(x - xCurrent, y - yCurrent);
+                if (IsOccupiedByOtherTeam(team, tile)) break;
             }
 
             for (var i = 1; xCurrent + i < 8 && yCurrent - i > 0; i++)
@@ -62,6 +63,7 @@ namespace Chess.Lib.Pieces
                 var tile = board[x, y];
                 if (IsOccupiedBySameTeam(team, tile)) break;
                 yield return new Move(x - xCurrent, y - yCurrent);
+                if (IsOccupiedByOtherTeam(team, tile)) break;
             }
 
             for (var i = 1; xCurrent - i > 0 && yCurrent + i < 8; i++)
@@ -71,6 +73,7 @@ namespace Chess.Lib.Pieces
                 var tile = board[x, y];
                 if (IsOccupiedBySameTeam(team, tile)) break;
                 yield return new Move(x - xCurrent, y - yCurrent);
+                if (IsOccupiedByOtherTeam(team, tile)) break;
             }
 
             for (var i = 1; xCurrent - i > 0 && yCurrent - i > 0; i++)
@@ -80,10 +83,14 @@ namespace Chess.Lib.Pieces
                 var tile = board[x, y];
                 if (IsOccupiedBySameTeam(team, tile)) break;
                 yield return new Move(x - xCurrent, y - yCurrent);
+                if (IsOccupiedByOtherTeam(team, tile)) break;
             }
         }
 
         public static bool IsOccupiedBySameTeam(Team team, ITile tile) =>
             tile is OccupiedTile occupiedTile && occupiedTile.Piece.Team == team;
+
+        public static bool IsOccupiedByOtherTeam(Team team, ITile tile) =>
+            tile is OccupiedTile occupiedTile && occupiedTile.Piece.Team != team;
     }
 }
