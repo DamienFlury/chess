@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO.Enumeration;
+using System.Xml.Serialization;
 using Chess.Lib;
 using Chess.Lib.Pieces;
 using Chess.Lib.Tiles;
@@ -10,7 +11,82 @@ namespace Chess.App
     {
         private static void Main(string[] args)
         {
-            ChoosingDialog();
+            Console.WriteLine("First Player: What's your name?");
+            WriteInputCharacter();
+            var player1 = Console.ReadLine();
+            Console.WriteLine();
+
+            Console.WriteLine("Second Player: What's your name then?");
+            WriteInputCharacter();
+            var player2 = Console.ReadLine();
+            Console.WriteLine();
+            Console.WriteLine();
+
+            Console.WriteLine("|=========================|");
+            Console.WriteLine("|  Alright, let's start!  |");
+            Console.WriteLine("|=========================|");
+
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write(player1);
+            Console.ResetColor();
+            Console.Write(" vs. ");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine(player2);
+            Console.ResetColor();
+            Console.WriteLine();
+
+            var chessGame = new ChessGame(player1, player2);
+            while (true)
+            {
+                chessGame.PrettyPrint2();
+                WriteInputCharacter();
+                var input = (Console.ReadLine() ?? "").ToLower();
+                if (input == "mv" || input == "move")
+                {
+                    Console.ForegroundColor = ConsoleColor.Magenta;
+                    Console.WriteLine("  Move from:");
+                    Console.ResetColor();
+                    Console.Write("    x: ");
+                    if (!int.TryParse(Console.ReadLine(), out var xCurrent)) continue;
+                    Console.Write("    y: ");
+                    if (!int.TryParse(Console.ReadLine(), out var yCurrent)) continue;
+
+                    Console.ForegroundColor = ConsoleColor.Magenta;
+                    Console.WriteLine("  Move to:");
+                    Console.ResetColor();
+                    Console.Write("    x: ");
+                    if (!int.TryParse(Console.ReadLine(), out var xDestination)) continue;
+                    Console.Write("    y: ");
+                    if (!int.TryParse(Console.ReadLine(), out var yDestination)) continue;
+
+
+                    if (!chessGame.TryMove(xCurrent, yCurrent, xDestination, yDestination))
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("  Move not possible");
+                        Console.ResetColor();
+                    }
+                }
+                //else if (input == "status")
+                //
+                //   for (var x = 0; x < 8; x++)
+                //   {
+                //       for (var y = 0; y < 8; y++)
+                //       {
+                //           if (!(game.Board[x, y] is OccupiedTile occupiedTile)) continue;
+                //           var piece = occupiedTile.Piece;
+                //           if (!(piece is King king)) continue;
+                //           var isChecked = king.IsChecked(game.Board);
+                //           Console.Write(king.Team + ": ");
+                //           if (isChecked) Console.ForegroundColor = ConsoleColor.Red;
+                //           Console.WriteLine(isChecked);
+                //           if (isChecked) Console.ResetColor();
+                //       }
+                //   }
+                //}
+
+
+            }
         }
 
         private static void ChoosingDialog()
@@ -149,6 +225,10 @@ namespace Chess.App
                                 : (y - 1) % (height / 8) == 0
                                     ? '–'
                                     : ' ');
+                    if ((x == 0 || x == width) && (y - 8) % 5 == 0)
+                    {
+                        
+                    }
                 }
 
                 Console.WriteLine();
