@@ -108,13 +108,12 @@ namespace Chess.Lib
             if (!piece.GetPossibleMoves(Board).Contains(move)) throw new IllegalMoveException("");
 
             var nextTiles = Board.Array
-                .Select((row, x) => row
-                    .Select((item, y) => x == xCurrent && y == yCurrent
-                        ? new EmptyTile() 
-                        : x == xDestination 
-                        && y == yDestination 
-                        ? new OccupiedTile(piece.With(x: x, y: y, hasBeenMoved: true)) 
-                        : item).ToArray()).ToArray();
+                .Select((row, xIndex) => row
+                    .Select((item, yIndex) => (xIndex, yIndex) switch {
+                        var (x, y) when x == xCurrent && y == yCurrent => new EmptyTile(),
+                        var (x, y) when x == xDestination && y == yDestination => new OccupiedTile(piece.With(x: x, y: y, hasBeenMoved: true)),
+                        _ => item,
+                    }).ToArray()).ToArray();
 
             return new Game(Player1.Name, Player2.Name, new Board(nextTiles));
         }

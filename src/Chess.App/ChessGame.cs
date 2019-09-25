@@ -32,7 +32,10 @@ namespace Chess.App
                 return false;
             }
 
-            CurrentTeam = CurrentTeam == Team.White ? Team.Black : Team.White;
+            CurrentTeam = CurrentTeam switch {
+                Team.White => Team.Black,
+                _ => Team.White,
+            };
             return true;
         }
 
