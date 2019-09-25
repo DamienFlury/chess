@@ -44,10 +44,10 @@ namespace Chess.App
                 {
                     if (Game.Board[x, y] is OccupiedTile occupiedTile)
                     {
-                        Console.ForegroundColor = occupiedTile.Piece.Team == Team.Black
+                        Console.ForegroundColor = occupiedTile.Piece?.Team == Team.Black
                             ? ConsoleColor.Cyan
                             : ConsoleColor.Yellow;
-                        Console.Write(occupiedTile.Piece.ToString().ToUpperInvariant()[0]);
+                        Console.Write(occupiedTile.Piece?.ToString()?.ToUpperInvariant()[0]);
                         Console.ResetColor();
                     }
                     else
@@ -103,8 +103,8 @@ namespace Chess.App
             {
                 var currentTile = Game.Board[x / tileWidth, y / tileHeight];
                 if (!(currentTile is OccupiedTile occupiedTile)) return new ColoredCharacter(' ', ConsoleColor.Gray);
-                return new ColoredCharacter(occupiedTile.Piece.ToString()[0],
-                    occupiedTile.Piece.Team == Team.White ? ConsoleColor.Green : ConsoleColor.Cyan);
+                return new ColoredCharacter(occupiedTile.Piece?.ToString()?[0] ?? ' ',
+                    occupiedTile.Piece?.Team == Team.White ? ConsoleColor.Green : ConsoleColor.Cyan);
             }
 
             return new ColoredCharacter(' ', ConsoleColor.Gray);

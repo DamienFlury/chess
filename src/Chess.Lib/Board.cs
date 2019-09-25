@@ -4,10 +4,10 @@ namespace Chess.Lib
 {
     public sealed class Board
     {
-        public Board(ITile[,] array) => _array = array;
+        public Board(ITile[][] array) => Array = array;
 
-        private readonly ITile[,] _array;
+        public ITile[][] Array { get; }
 
-        public ITile this[int a, int b] => _array[a, b];
+        public ITile this[int a, int b] => Array[a][b];
     }
 }
